@@ -1,0 +1,35 @@
+#landing-page {
+  .contact-wrapper {
+    .contact-blocks {
+      .block {
+        &.ask-a-question {
+          .column {
+            .form-wrapper {
+              form {
+                .form-row-wrapper {
+                  overflow: hidden;
+                }
+                .form-row {
+                  &.zipcode {
+                    width: 65%;
+                    padding-right: 0;
+                    float: left;
+                  }
+                  &.housenumber {
+                    width: 30%;
+                    float: right;
+                    padding-left: 80px;
+
+                    label {
+                      width:70px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

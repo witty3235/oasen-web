@@ -1,0 +1,31 @@
+.content-frame.home {
+
+//home 2 - mijn oasen
+.quick-links {
+  ul {
+    li {
+      .button {
+        height: 300px;
+      }
+    }
+  }
+}
+
+  //home 4 & 6 - nieuws/projecten & over oasen
+  .items {
+    .small-title {
+      padding-left: 100px;
+    }
+
+    .item {
+      a {
+        padding: 40px 180px 40px 100px;
+
+        .arrow {
+          right: 140px;
+        }
+      }
+    }
+  }
+}
+
