@@ -1,0 +1,206 @@
+form {
+  *:focus {
+    outline: none;
+  }
+
+  input,
+  textarea,
+  select {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    @include font-type-base();
+  }
+  select {
+    appearance: none;
+  }
+  textarea {
+    resize: none;
+    display: block;
+  }
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+
+.ask-a-question {
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px $primary-color inset;
+    -webkit-text-fill-color: $font-color-light;
+  }
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+::-webkit-input-placeholder {
+  @include font-type-base(italic);
+  color: $background-color-grey;
+  transition: color .2s ease-out;
+}
+:-moz-placeholder { /* Firefox 18- */
+  @include font-type-base(italic);
+  color: $background-color-grey;
+  transition: color .2s ease-out;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  @include font-type-base(italic);
+  color: $background-color-grey;
+  transition: color .2s ease-out;
+}
+:-ms-input-placeholder {
+  @include font-type-base(italic);
+  color: $background-color-grey !important;
+  transition: color .2s ease-out;
+}
+.modulepage .form-row.field-correct input:-ms-input-placeholder {
+  color: $background-color-grey !important;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+.modulepage .form-input-meterreading::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.modulepage .form-input-meterreading:-moz-placeholder {
+  color: #aaaaaa;
+}
+.modulepage .form-input-meterreading::-moz-placeholder {
+  color: #aaaaaa;
+}
+.modulepage .form-input-meterreading:-ms-input-placeholder {
+  color: #aaaaaa !important;
+}
+.meterReadingNumber::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.meterReadingNumber:-moz-placeholder {
+  color: #aaaaaa;
+}
+.meterReadingNumber::-moz-placeholder {
+  color: #aaaaaa;
+}
+.meterReadingNumber:-ms-input-placeholder {
+  color: #aaaaaa !important;
+}
+.search-form form input::-webkit-input-placeholder {
+  color: $font-color-light-transparent2;
+}
+.search-form form input:-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.search-form form input::-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.search-form form input:-ms-input-placeholder {
+  color: $font-color-light-transparent2 !important;
+}
+.ask-a-question form input::-webkit-input-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question  form input:-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question form input::-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question form input:-ms-input-placeholder {
+  color: $font-color-light-transparent2 !important;
+}
+.ask-a-question form textarea::-webkit-input-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question  form textarea:-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question form textarea::-moz-placeholder {
+  color: $font-color-light-transparent2;
+}
+.ask-a-question form textarea:-ms-input-placeholder {
+  color: $font-color-light-transparent2 !important;
+}
+
+#zipcode-form form input::-webkit-input-placeholder {
+  color: rgba(255,255,255,.7);
+}
+#zipcode-form  form input:-moz-placeholder {
+  color: rgba(255,255,255,.7);
+}
+#zipcode-form form input::-moz-placeholder {
+  color: rgba(255,255,255,.7);
+}
+#zipcode-form form input:-ms-input-placeholder {
+  color: rgba(255,255,255,.7);
+}
+
+:focus::-webkit-input-placeholder{
+  color:transparent !important;
+}
+:focus::-moz-placeholder{
+  color:transparent !important;
+}
+.no-placeholder::-webkit-input-placeholder{
+  color:transparent !important;
+}
+.no-placeholder::-moz-placeholder{
+  color:transparent !important;
+}
+
+.search {
+  form {
+    ::-webkit-input-placeholder {
+      color: $font-color-light;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $font-color-light;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: $font-color-light;
+    }
+    :-ms-input-placeholder {
+      color: $font-color-light !important;
+    }
+    :focus::-webkit-input-placeholder{
+      color:transparent;
+    }
+    :focus::-moz-placeholder{
+      color:transparent;
+    }
+  }
+}
+
+.article .footer {
+  form {
+    ::-webkit-input-placeholder {
+      color: $border-color-light2;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $border-color-light2;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: $border-color-light2;
+    }
+    :-ms-input-placeholder {
+      color: $border-color-light2 !important;
+    }
+    :focus::-webkit-input-placeholder{
+      color:transparent;
+    }
+    :focus::-moz-placeholder{
+      color:transparent;
+    }
+  }
+}
+

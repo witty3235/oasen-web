@@ -1,0 +1,151 @@
+.faq-wrapper {
+  #categories {
+    overflow: hidden;
+
+    .category {
+    }
+  }
+
+  h3 {
+    margin: 20px 0 0 0;
+    text-align: left;
+    position: relative;
+
+    @media #{$small-only} {
+      .icon {
+        position: absolute;
+        top: 8px;
+        right: 25px;
+        width: 10px;
+        height: 10px;
+        transform-origin: center center;
+
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 2px;
+          background: $button-color;
+          position: absolute;
+        }
+        &:before {
+          top: 5px;
+          left: 5px;
+          transform-origin: 0% 50%;
+          transform: rotate(225deg);
+        }
+        &:after {
+          top: 0;
+          right: 0;
+          transform-origin: 100% 50%;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+
+  ul {
+    margin: 0 20px;
+    padding: 0;
+    list-style: none;
+
+    @media #{$small-only} {
+      height: 0;
+      overflow: hidden;
+
+      li:first-child {
+        margin-top: 30px;
+      }
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding: 0;
+      list-style-type: none;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+
+        h4 {
+          font-size: 1.8rem;
+          line-height: 1.25;
+        }
+      }
+
+      .question {
+        display: block;
+        @include font-type-base(bold);
+        position: relative;
+        padding-left: 30px;
+
+        h4 {
+          margin: 0;
+        }
+
+        .icon {
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 7px;
+          left: 0;
+
+          .left,
+          .right {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 2px;
+            background: $button-color;
+            position: absolute;
+          }
+          .left {
+            top: 5px;
+            left: 5px;
+            transform-origin: 0% 50%;
+            transform: rotate(225deg);
+          }
+          .right {
+            top: 0;
+            right: 0;
+            transform-origin: 100% 50%;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      .answer {
+        margin: 20px 0 0 0;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        padding-left: 30px;
+
+        p {
+          &:first-child {
+            margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+
+        a {
+          @include text-link();
+        }
+      }
+    }
+  }
+}
+
+#article {
+  .sections {
+    section {
+
+    }
+  }
+
+
+}

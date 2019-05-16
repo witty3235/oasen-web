@@ -1,0 +1,957 @@
+// all hovers
+
+//global
+a.button,
+.button,
+button.button {
+  //all with js
+
+  &.light {
+    transition: background .3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+  }
+}
+
+//show video on homepage, even if it's a touch laptop
+.bg-video {
+  display: block !important;
+}
+
+//nav
+#menu-wrapper {
+  .menu {
+    .social-menu {
+      li {
+        a {
+          .icon {
+            svg {
+              * {
+                transition: fill .4s ease-out;
+              }
+            }
+          }
+          &:hover {
+            .icon {
+              svg {
+                * {
+                  fill: $font-color-light-transparent2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-menu {
+  li:not(.active) {
+    a {
+      &:hover {
+        color: $font-color-light-transparent2;
+
+        p.intro {
+          color: $font-color-light-transparent2;
+        }
+      }
+    }
+  }
+  &#top-menu-wrapper {
+    li {
+      &.active {
+        a {
+          &:hover {
+            color: $font-color-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.anchor-menu {
+  ul {
+    li {
+      a {
+        &:hover {
+          color: $font-color-link;
+        }
+      }
+    }
+  }
+}
+
+//header
+header {
+  .logo {
+    svg {
+      * {
+        transition: fill .4s ease-out;
+      }
+    }
+    &:hover {
+      svg {
+        * {
+          fill: $font-color-light-transparent2;
+        }
+      }
+    }
+  }
+  #main-menu-toggle {
+    right: 15px;
+  }
+
+  #search-toggle {
+    right: 65px;
+  }
+}
+
+////standard header with menu open white hovers different
+#page.menu-active {
+  header {
+    .logo {
+      &:hover {
+        svg {
+          * {
+            fill: $font-color-light-transparent2;
+          }
+        }
+      }
+    }
+
+    #search-toggle {
+      &:hover {
+        .icon {
+          svg {
+            * {
+              fill: $font-color-light-transparent2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////pages header on white > blue logo & blue menu
+////default article pages && projects page
+body {
+  &.article:not(.module):not(.search):not(.reservation):not(.payment),
+  &.projects,
+  &.landingpage.contact {
+    #page:not(.menu-active) {
+      header {
+        .logo {
+          &:hover {
+            svg {
+              * {
+                fill: $font-color-link;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.article,
+  &.landingpage.contact {
+    #page:not(.menu-active) {
+      header {
+        #main-menu-toggle {
+          &:hover {
+            background: $button-color-transparent3;
+          }
+        }
+      }
+    }
+  }
+}
+
+////scrolled menu > white bg + logo & menu blue
+body {
+  &.scrolled {
+    #page:not(.menu-active) {
+      header {
+        .logo {
+          &:hover {
+            svg {
+              * {
+                fill: $font-color-link;
+              }
+            }
+          }
+        }
+        #main-menu-toggle {
+          &:hover {
+            background: $button-color-transparent3;
+          }
+        }
+        #top-menu-wrapper li {
+          a {
+            &:hover {
+              color: $font-color-link;
+            }
+          }
+          &.active {
+            a {
+              &:hover {
+                color: $font-color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//search
+.module-block {
+  &.search {
+    form {
+      a.button {
+        .icon {
+          svg {
+            * {
+              transition: fill .4s ease-out;
+            }
+          }
+        }
+        &:hover {
+          .icon {
+            svg {
+              * {
+                fill: $font-color-light-transparent2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-form {
+  form {
+    .search-icon {
+      .icon {
+        svg {
+          * {
+            transition: fill .4s ease;
+          }
+        }
+      }
+      &:hover {
+        .icon {
+          svg {
+            * {
+              fill: $font-color-light-transparent2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-results {
+  ul {
+    li {
+      a {
+        h4 {
+          transition: color .3s ease;
+        }
+        &:hover {
+          h4 {
+            color: $button-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-autocomplete-list {
+  li {
+    a {
+      &:hover {
+        color: $font-color-light-transparent2;
+      }
+    }
+  }
+}
+
+//landingpages
+#landing-page {
+  .sidebar {
+    ul {
+      li {
+        a {
+          &:hover {
+            color: $button-color;
+
+            &:before,
+            &:after {
+              background-color: $button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.has-grid {
+    .grid {
+      ul {
+        li {
+          &.has-img {
+            .content,
+            .overlay {
+              transition: height .6s cubic-bezier(0.580, 0.000, 0.390, 1.000);
+            }
+            &:hover {
+              .content,
+              .overlay {
+                height: 150px;
+                transition: height .6s cubic-bezier(0.580, 0.000, 0.390, 1.000) .1s;
+              }
+            }
+          }
+        }
+      }
+
+      @media #{$large-up} {
+        ul {
+          li {
+            &.has-img {
+              p {
+                transition: margin .6s cubic-bezier(0.580, 0.000, 0.390, 1.000), max-height .6s cubic-bezier(0.580, 0.000, 0.390, 1.000);
+              }
+              .date {
+                transition: margin .6s cubic-bezier(0.580, 0.000, 0.390, 1.000);
+              }
+              &:hover {
+                p {
+                  max-height: 80px;
+                  margin-top: 25px;
+                  transition: margin .5s cubic-bezier(0.580, 0.000, 0.390, 1.000) .15s, max-height .5s cubic-bezier(0.580, 0.000, 0.390, 1.000) .15s;
+                }
+                .date {
+                  margin-top: 25px;
+                  transition: margin .5s cubic-bezier(0.580, 0.000, 0.390, 1.000) .15s;
+                }
+                .content,
+                .overlay {
+                  height: 55%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .projects-wrapper .grid.column.wide ul li.has-img:hover {
+      .content,
+      .overlay {
+        height: 55%;
+      }
+    }
+  }
+}
+
+//contact
+#landing-page {
+  .contact-wrapper {
+    .contact-blocks {
+      .block {
+        &.faqs {
+          .column {
+            &.right {
+              ul {
+                li {
+                  a {
+                    &:hover {
+                      color: $font-color-light-transparent2;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.ask-a-question {
+          .form-wrapper {
+            form {
+              .form-inputs {
+                .arrow {
+                  transition: border-top-color .3s ease;
+                }
+                &:hover {
+                  .arrow {
+                    border-top-color: $font-color-light-transparent2;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.footer {
+          a {
+            &:hover {
+              color: $button-color;
+
+              &:before,
+              &:after {
+                background-color: $button-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//faq
+.faq-wrapper {
+  ul {
+    li {
+      a {
+        &:hover {
+          color: $button-color;
+          border-color: transparent;
+        }
+      }
+      .answer {
+        a {
+          @include text-link-hover();
+        }
+      }
+    }
+  }
+}
+
+//article
+article {
+  a {
+    &.img-download {
+      .icon {
+        transition: top .4s cubic-bezier(0.175, 0.885, 0.320, 1.275) .4s, opacity .3s ease-out .4s;
+      }
+      &:hover {
+        .icon {
+          top: 20px;
+          opacity: .6;
+        }
+      }
+    }
+  }
+  ul.share {
+    li {
+      a {
+        svg {
+          * {
+            transition: fill .4s ease-out;
+          }
+        }
+        &:hover {
+          svg {
+            * {
+              fill: $font-color-link;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .sections {
+    section {
+      a {
+        &:not(.button):not(.infographic-button) {
+          @include text-link-hover();
+        }
+      }
+      &.text {
+        aside {
+          ul {
+            li {
+              a {
+                transition: color .4s ease;
+
+                &:hover {
+                  color: $button-color;
+                }
+              }
+
+              &.has-image {
+                .img img {
+                  transition: transform .6s ease-out;
+                }
+
+                &:hover {
+                  .img img {
+                    transform: scale(1.08);
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.highlight {
+          aside {
+            ul {
+              li {
+                a {
+                  &:hover {
+                    color: $font-color-link-hover;
+                  }
+                }
+              }
+            }
+          }
+          .text {
+            a {
+              @include text-link-hover(dark);
+            }
+          }
+        }
+      }
+      &.faqs {
+        .question {
+          transition: color .4s ease;
+
+          &:hover {
+            color: $button-color;
+            border-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .print {
+      .icon {
+        svg {
+          * {
+            transition: fill .4s ease-out;
+          }
+        }
+      }
+      &:hover {
+        .icon {
+          svg {
+            * {
+              fill: $font-color-link;
+            }
+          }
+        }
+      }
+    }
+  }
+  .related-articles-footer {
+    ul {
+      li {
+        a {
+          .img span {
+            transition: transform .6s ease-out;
+          }
+          &:hover {
+            .img span {
+              transform: scale(1.05);
+            }
+            .label {
+              color: $button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//modulepages
+.modulepage {
+  .close {
+    .icon {
+      &:before,
+      &:after {
+        transition: background-color .4s ease;
+      }
+    }
+
+    &:hover {
+      color: $font-color-link-hover;
+
+      .icon {
+        &:before,
+        &:after {
+          background-color: $font-color-link-hover;
+        }
+      }
+    }
+  }
+
+  //selfscan
+  .items {
+    li {
+      a {
+        &:hover {
+          color: $button-hover-color;
+        }
+      }
+    }
+  }
+
+  //popup
+  .explanation-button {
+    span {
+      transition: background .2s ease-out, color .2s ease-out;
+    }
+
+    &:hover {
+      span {
+        background: $button-color;
+        color: $font-color-light;
+      }
+    }
+  }
+
+  .banner {
+    .content {
+      transition: padding 0.6s cubic-bezier(0.895, 0, 0.155, 1);
+    }
+    &:hover {
+      .content {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  .step-content {
+    a.text-link {
+      &:hover {
+        color: $button-color;
+      }
+    }
+  }
+}
+
+a.close {
+  .icon {
+    transform-origin: center center;
+    transition: transform .25s ease-out;
+  }
+
+  &:hover {
+    color: $font-color-link-hover;
+
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+//reservation
+.reservation-wrapper {
+  .form-wrapper {
+    form {
+      .form-inputs {
+        .arrow {
+          transition: border-top-color .3s ease;
+        }
+        &:hover {
+          .arrow {
+            border-top-color: $background-color-grey;
+          }
+        }
+      }
+    }
+
+    .success-message a {
+      &:hover {
+        color: $font-color-link;
+      }
+    }
+  }
+}
+
+//global wave button box hovers
+.wave-button {
+  .hover-ripple {
+    &:before,
+    &:after,
+    .inner:before,
+    .inner:after {
+      transition: background .3s ease-out;
+    }
+    svg {
+      path,
+      polygon,
+      circle,
+      rect {
+        transition: fill .3s ease-out;
+      }
+    }
+
+  }
+
+  &.box {
+    &:hover {
+      z-index: 20;
+
+      .hover-ripple {
+        .inner {
+          &:after {
+            background: $primary-color2;
+          }
+        }
+        svg {
+          path,
+          polygon,
+          circle,
+          rect {
+            fill: $primary-color2 !important;
+          }
+        }
+      }
+    }
+    &.transparent {
+      &:hover {
+        .hover-ripple {
+          .inner {
+            &:after {
+              background: $primary-color2;
+            }
+          }
+          svg {
+
+            path,
+            polygon,
+            circle,
+            rect {
+              fill: $primary-color2 !important;
+            }
+          }
+        }
+      }
+    }
+    &.light {
+      &:hover {
+        .hover-ripple {
+          .inner {
+            &:after {
+              background: $background-color-grey-light;
+            }
+          }
+          svg {
+
+            path,
+            polygon,
+            circle,
+            rect {
+              fill: $background-color-grey-light !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.rounded {
+    &:hover {
+      .hover-ripple {
+        &:before,
+        &:after,
+        .inner:before,
+        .inner:after {
+          background: $button-hover-color;
+        }
+        svg {
+
+          path,
+          polygon,
+          circle,
+          rect {
+            fill: $button-hover-color !important;
+          }
+        }
+      }
+    }
+    &.action {
+      &:hover {
+        .hover-ripple {
+          &:before,
+          &:after,
+          .inner:before,
+          .inner:after {
+            background: $action-hover-color;
+          }
+          svg {
+            path,
+            polygon,
+            circle,
+            rect {
+              fill: $action-hover-color !important;
+            }
+          }
+        }
+      }
+    }
+    &.tag {
+      &:hover {
+        .hover-ripple {
+          &:before,
+          &:after,
+          .inner:before,
+          .inner:after {
+            background: $button-hover-second;
+          }
+          svg {
+            path,
+            polygon,
+            circle,
+            rect {
+              fill: $button-hover-second !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.button.notfound {
+  transition: background .3s ease-out;
+
+  &:hover {
+    background: $button-hover-color;
+  }
+}
+
+//infographics
+article .sections section.infographic {
+  //conscious-consumption
+  ul {
+    li {
+      a {
+        .bg {
+          span {
+            transition: background .3s ease, transform .3s ease-out;
+          }
+        }
+        .label {
+          opacity: 0;
+          top: 28%;
+          transition: opacity .3s ease, top .5s cubic-bezier(0.210, 0.800, 0.360, 1.620);
+        }
+        &:hover {
+          .bg {
+            span {
+              background: $button-hover-color;
+              transform: scale(1.15);
+            }
+          }
+          .label {
+            opacity: 1;
+            top: 13%;
+          }
+        }
+      }
+    }
+  }
+  &#making-drinking-water {
+    svg {
+      .button {
+        cursor: pointer;
+        transition: fill .3s ease;
+
+        &:hover {
+          * {
+            fill: $action-color;
+          }
+        }
+      }
+    }
+  }
+
+  &#service-area {
+    svg {
+      .button {
+        display: block;
+        cursor: pointer;
+
+        * {
+          transition: fill .3s ease;
+        }
+
+        &:not(.active) {
+          &:hover {
+            * {
+              fill: $button-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &#service-area-stations {
+    svg {
+      .button {
+        cursor: pointer;
+
+        &:hover {
+          * {
+            fill: $action-color;
+          }
+        }
+      }
+    }
+  }
+  .close {
+    .icon {
+      transition: transform .3s ease-out;
+    }
+    &:hover {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+//pagination
+.pagination li a {
+  &:before,
+  &:after,
+  span:before,
+  span:after {
+    transition: background .3s ease;
+  }
+
+  &:not(.active) {
+    &:hover {
+      color: $font-color-link-hover;
+
+      &:before,
+      &:after {
+        background: $font-color-link-hover;
+      }
+      span {
+        &:before,
+        &:after {
+          background: $font-color-link-hover;
+        }
+      }
+    }
+  }
+  &.active {
+    cursor: default;
+  }
+}

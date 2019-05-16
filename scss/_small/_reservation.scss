@@ -1,0 +1,163 @@
+.reservation-wrapper {
+  padding-top: 20px;
+
+  .form-wrapper {
+    margin: 0 20px;
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+
+    .success-message {
+      opacity: 0;
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
+
+    form {
+      overflow: hidden;
+
+      .field-error {
+        input,
+        textarea,
+        select {
+          border-color: $font-color-error;
+        }
+        .form-inputs:not(.radio) {
+          &:before,
+          &:after {
+            background: $font-color-error;
+          }
+        }
+      }
+      .form-row {
+        font-size: 2.0rem;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+      .form-inputs {
+        position: relative;
+
+        &:not(.radio) {
+          &:before,
+          &:after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 5px;
+            background: $background-color-grey;
+            position: absolute;
+            bottom: 0;
+          }
+          &:before {
+            left: 0;
+          }
+          &:after {
+            right: 0;
+          }
+        }
+
+        .arrow {
+          position: absolute;
+          right: 8px;
+          bottom: 5px;
+          display: block;
+          border: solid transparent;
+          height: 0;
+          width: 0;
+          border-top-color: $background-color-grey;
+          border-width: 7px 5px 5px 5px;
+          z-index: -1;
+        }
+
+        &.radio {
+          .radio-wrapper {
+            position: relative;
+            margin: 20px 0;
+
+            input[type=radio] {
+              width: auto;
+              display: none;
+            }
+
+            label {
+              display: block;
+              padding-left: 35px;
+              cursor: pointer;
+
+              span {
+                display: block;
+              }
+
+              .radio {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                border-radius: 20px;
+                background-color: $background-color-grey;
+                cursor: pointer;
+
+                &:after {
+                  content: '';
+                  display: block;
+                  width: 10px;
+                  height: 10px;
+                  position: absolute;
+                  left: 5px;
+                  top: 5px;
+                  border-radius: 10px;
+                  background-color: $button-color;
+                  transform: scale(0);
+                  transition: transform .4s cubic-bezier(0.240, 0.865, 0.575, 1.405);
+                }
+              }
+            }
+
+            input:checked + label {
+              .radio:after {
+                transform: scale(1);
+              }
+            }
+          }
+        }
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      select {
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+      }
+      input,
+      select,
+      textarea {
+        padding: 5px 10px;
+        display: block;
+        width: 100%;
+        font-size: 2.0rem;
+        background: transparent;
+        border-bottom: 1px solid $background-color-grey;
+      }
+      input {
+      }
+      textarea {
+        border-left: 1px solid $background-color-grey;
+        border-right: 1px solid $background-color-grey;
+      }
+
+      .actions {
+        margin-top: 50px;
+        text-align: center;
+        padding-bottom: 8px;
+      }
+    }
+  }
+}
+

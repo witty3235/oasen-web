@@ -1,0 +1,101 @@
+.module-block {
+  position: relative;
+  display: block;
+  padding: 20px;
+  margin: 30px auto;
+  overflow: hidden;
+  text-align: center;
+
+  .button {
+    margin-top: 20px;
+  }
+
+  form {
+    text-align: center;
+
+    .numbers {
+      margin: 20px 0;
+      display: inline-block;
+      overflow: hidden;
+      clear: both;
+
+      .icon {
+        float: left;
+        margin-right: 10px;
+        line-height: 0;
+
+        svg {
+          width: 44px;
+          height: 44px;
+
+          * {
+            fill: $button-color;
+          }
+        }
+      }
+
+      input {
+        border: none;
+        margin: 0 1px;
+        padding: 0;
+        float: left;
+        width: 30px;
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        background: $background-color-grey;
+        border-radius: 3px;
+        @include font-type-base(bold);
+        font-size: 2.2rem;
+      }
+    }
+    .actions {
+      input[type='submit']{
+        display: none;
+      }
+
+      .button {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.meterstand {
+    width: 280px;
+
+    h2.tr-head {
+      color: $font-color;
+    }
+  }
+
+  &.verhuizing {
+    width: 320px;
+
+    h2 {
+      text-align: left;
+      position: relative;
+      padding-left: 70px;
+
+      @media #{$medium-only} {
+        width: 230px;
+        margin-top: 10px;
+      }
+
+      .icon {
+        position: absolute;
+        left: 0;
+        top: -12px;
+
+        svg {
+          width: 56px;
+          height: 56px;
+
+          * {
+            fill: $button-color;
+          }
+        }
+      }
+    }
+  }
+}
+

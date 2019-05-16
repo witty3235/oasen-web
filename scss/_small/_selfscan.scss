@@ -1,0 +1,147 @@
+.modulepage {
+  .alphabet {
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid $background-color-grey;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        padding: 0;
+        display: block;
+        width: 21px;
+        height: 21px;
+        line-height: 21px;
+        float: left;
+        margin: 0;
+        text-align: center;
+        border-radius: 10px;
+        @include font-type-base(bold);
+        transition: background .3s ease .1s;
+
+        .character {
+          color: $font-color-third;
+        }
+
+        a {
+          text-decoration: none;
+          display: block;
+        }
+
+        &.active {
+          background: $button-color;
+
+          a {
+            color: $font-color-light;
+          }
+        }
+      }
+    }
+  }
+
+  .items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      padding: 0;
+      position: relative;
+      padding-left: 25px;
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      transition: opacity .3s ease-out, height 0s ease-out .3s;
+
+      &.active {
+        opacity: 1;
+        height: auto;
+        transition: opacity .3s ease-out .3s, height 0s ease-out .3s;
+      }
+
+      .checkbox {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 0;
+        border-radius: 2px;
+        background-color: $background-color-grey;
+        cursor: pointer;
+        transition: background .2s ease-out;
+      }
+
+      input {
+        display: none;
+
+        + .checkbox::before,
+        + .checkbox::after {
+          background-color: $font-color-light;
+          content: "";
+          position: absolute;
+          display: block;
+          height: 2px;
+          width: 0;
+          border-radius: 3px;
+          transform-origin: 0% 50%;
+        }
+        + .checkbox::before {
+          left: 3px;
+          top: 8px;
+          transform: rotate(45deg);
+          transition: width .05s ease-out .15s;
+        }
+        + .checkbox::after {
+          left: 6px;
+          top: 13px;
+          transform: rotate(-45deg);
+          transition: width .15s ease-out;
+        }
+
+        &:checked {
+          + .checkbox {
+            background: $button-color;
+          }
+          + .checkbox::before {
+            width: 6px;
+            transition: width .05s ease-out;
+          }
+          + .checkbox::after {
+            width: 13px;
+            transition: width .15s ease-out .05s;
+          }
+        }
+
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .print-wrapper {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .device-header {
+    position: relative;
+
+    h3 {
+      margin-top: 20px;
+
+      span {
+        display: block;
+        padding-right: 110px;
+      }
+    }
+  }
+}

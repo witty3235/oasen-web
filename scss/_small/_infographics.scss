@@ -1,0 +1,533 @@
+article .sections section {
+  &.infographic {
+    position: relative;
+    z-index: 2;
+
+    + .infographic {
+      z-index: auto;
+    }
+
+    &:nth-child(even) {
+      .intro-box,
+      .popup.small .info-box {
+        background: $font-color-light;
+      }
+    }
+
+    &#conscious-consumption {
+      h2 {
+        margin-bottom: 0;
+      }
+      .header {
+        margin-bottom: 40px;
+      }
+    }
+
+    &#service-area {
+      position: relative;
+      z-index: 2;
+
+      .content {
+        position: relative;
+      }
+
+      svg {
+        .button {
+          &.active {
+            * {
+              fill: $button-hover-color;
+            }
+          }
+        }
+      }
+    }
+    &#service-area-stations {
+      .content {
+        position: relative;
+      }
+
+      svg {
+        .button {
+          * {
+            fill: #f4b238;
+            transition: fill .3s ease;
+          }
+
+          &.active {
+            * {
+              fill: $action-color;
+            }
+          }
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+    .content {
+      padding: 0 30px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          color: $font-color-light;
+          @include font-type-base();
+
+          .label {
+            position: absolute;
+            top: 15%;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+          }
+
+          .box-wrapper {
+            display: table;
+            width: 100%;
+            height: 100%;
+
+            .box {
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+            }
+          }
+
+          .icon {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            padding: 0;
+
+            svg * {
+              fill: $font-color-light;
+            }
+          }
+
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+
+            span {
+              width: inherit;
+              height: inherit;
+              border-radius: 50%;
+              background: $primary-color;
+            }
+          }
+        }
+
+        &#showering {
+          width: 100%;
+          padding-bottom: 100%;
+
+          .icon {
+            width: 140px;
+            height: 140px;
+          }
+        }
+        &#toilet {
+          width: 95%;
+          padding-bottom: 95%;
+
+          .icon {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        &#washing-machine {
+          width: 90%;
+          padding-bottom: 90%;
+
+          .icon {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        &#other {
+          width: 75%;
+          padding-bottom: 75%;
+
+          .icon {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        &#hand-washing {
+          width: 70%;
+          padding-bottom: 70%;
+
+          .icon {
+            width: 90px;
+            height: 90px;
+          }
+        }
+        &#dish-washer {
+          width: 65%;
+          padding-bottom: 65%;
+
+          .icon {
+            width: 80px;
+            height: 80px;
+          }
+        }
+        &#drinking {
+          width: 60%;
+          padding-bottom: 60%;
+
+          .icon {
+            width: 75px;
+            height: 75px;
+          }
+        }
+      }
+    }
+
+    .intro-box {
+      background: $background-color-grey-light;
+      padding: 25px;
+      width: 200px;
+      margin: -10px auto 20px auto;
+
+      .litres {
+        .amount {
+          margin: 0;
+        }
+      }
+    }
+
+    .litres {
+      display: block;
+      text-align: center;
+
+      .amount {
+        margin: 15px 0 10px 0;
+        display: block;
+        font-size: 7.0rem;
+        line-height: 7.0rem;
+        @include font-type-base(bold);
+      }
+      .label {
+        display: block;
+        @include font-type-base(bold);
+      }
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      z-index: 20;
+
+      &.small {
+        position: absolute;
+        top: 50px;
+        height: auto;
+        padding: 0 5%;
+
+        .info-box {
+          max-width: 290px;
+          padding: 25px 50px 25px 25px;
+          left: auto;
+          top: auto;
+          position: relative;
+          background: $background-color-grey-light;
+        }
+
+        .close {
+          top: 0;
+          right: 0;
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+
+          & + .info {
+            margin-top: 20px;
+          }
+        }
+
+        .info {
+          margin-top: 15px;
+        }
+      }
+
+      .bg-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .info-box {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background: $font-color-light;
+        z-index: 5;
+        padding: 20px;
+        max-width: 75%;
+      }
+
+      .tip-box {
+        position: absolute;
+        bottom: 5%;
+        right: 10%;
+        background: $font-color-light;
+        z-index: 5;
+        padding: 20px;
+        max-width: 75%;
+
+        .icon {
+          width: 60px;
+          height: 60px;
+          display: block;
+          text-align: center;
+          margin: 0 auto 45px auto;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 2px;
+            background: $font-color;
+            margin-left: -30px;
+            margin-top: 15px;
+          }
+        }
+
+        svg {
+          display: inline-block;
+          width: 36px;
+          height: 60px;
+
+          * {
+            fill: $font-color;
+          }
+        }
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 2.0rem;
+        line-height: 2.6rem;
+      }
+
+      p {
+        line-height: 2.0rem;
+      }
+
+      .close {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        padding: 20px;
+        z-index: 5;
+
+        .icon {
+          display: block;
+          width: 19px;
+          height: 20px;
+          position: relative;
+
+          &:after,
+          &:before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: $font-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0 0;
+          }
+          &:before {
+            transform: rotate(-45deg);
+            top: 20px;
+            left: -1px;
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      .tr-circle {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: $font-color-light;
+        z-index: 1;
+      }
+
+      //drinking water exceptions
+      &.drinking-water {
+        .tr-circle {
+          background: #f7f7f4;
+        }
+      }
+
+      &.aeration {
+        .info-box {
+          top: 25%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.sand-filtration {
+        .info-box {
+          top: 35%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.softening {
+        .info-box {
+          top: 40%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.active-carbon-filter {
+        .info-box {
+          top: 40%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.uv {
+        .info-box {
+          top: 12%;
+        }
+        .tr-circle {
+          background: #186898;
+        }
+        .close {
+          .icon {
+            &:after,
+            &:before {
+              background: $font-color-light;
+            }
+          }
+        }
+      }
+      &.clean-water-cellar {
+        .info-box {
+          top: 40%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.distribution-pump {
+        .info-box {
+          top: 12%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+      &.tap {
+        .info-box {
+          top: 60%;
+        }
+        .tr-circle {
+          background: #e8e8e8;
+        }
+      }
+
+      //conscious consumption exceptions
+
+      //grey bg
+      &.drinking {
+        .tr-circle {
+          background: #d7d7d7;
+        }
+        .close {
+          .icon {
+            &:after,
+            &:before {
+              background: $font-color;
+            }
+          }
+        }
+      }
+
+      //white bg
+      &.showering,
+      &.other {
+        .info-box,
+        .tip-box {
+          background: $background-color-grey-light;
+        }
+
+        .tr-circle {
+          background: #ffffff;
+        }
+        .close {
+          .icon {
+            &:after,
+            &:before {
+              background: $font-color;
+            }
+          }
+        }
+      }
+
+      //blue bg
+      &.toilet,
+      &.dish-washer,
+      &.washing-machine,
+      &.hand-washing {
+        .tr-circle {
+          background: #0783C5;
+        }
+        .close {
+          .icon {
+            &:after,
+            &:before {
+              background: $font-color-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

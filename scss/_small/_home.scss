@@ -1,0 +1,197 @@
+@media #{$small-only} {
+  #home-oasen {
+    h1 {
+      max-width: 300px;
+      margin-top: -15%;
+    }
+  }
+
+  #home-mijn-oasen,
+  #home-over-oasen {
+    .bg-image {
+      height: 50.1%;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  #home-nieuws {
+    .bg-image {
+      height: 50.1%;
+    }
+  }
+}
+.content-frame.home {
+  //algemeen
+  .description {
+    max-width: 280px;
+    margin: 20px auto 0 auto;
+  }
+  .button {
+    margin-top: 20px;
+    z-index: 10;
+  }
+  .module-block {
+    display: none;
+  }
+
+  //home 1 - oasen
+  .scroll-indicator {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+
+    @media #{$small-only} {
+      @media (max-height: 620px){
+        display: none;
+      }
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      width: 29px;
+      height: 56px;
+    }
+
+    .icon {
+      display: block;
+      line-height: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+
+      svg {
+        * {
+          fill: $font-color-light;
+        }
+      }
+    }
+  }
+
+  .meterstand {
+    display: block;
+    margin: 20px auto 90px auto;
+
+    @media #{$small-only} {
+
+      @media (max-height: 700px) {
+        .numbers {
+          display: none;
+        }
+        .actions {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-height: 620px){
+       margin-bottom: 20px;
+      }
+      @media (max-height: 500px) {
+        display: none;
+      }
+    }
+  }
+
+  a.incident-notice {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    @media #{$small-only} {
+      border-radius: 0;
+
+      h3 {
+        height: 54px;
+
+        @media (min-width: 450px) {
+          line-height: 42px;
+        }
+      }
+    }
+  }
+
+  //home 2 - mijn oasen
+  .quick-links {
+    display: none;
+  }
+
+  //home 4 & 6 - nieuws/projecten & over oasen
+  .items {
+    display: none;
+  }
+
+  .project-wrapper {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+    span {
+      display: inline;
+    }
+
+    .project {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 50px 40px 40px 40px;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+
+      .inner {
+        display: block;
+      }
+
+      h1 {
+        text-align: left;
+        color: $font-color-light;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$small-only} {
+    a.button.incident {
+      .hover-ripple {
+        &:before,
+        &:after {
+          top: 1px;
+        }
+
+        .inner {
+          &:before,
+          &:after {
+            bottom: 1px;
+          }
+        }
+
+        .top,
+        .bottom {
+          height: 37px;
+        }
+
+        .left,
+        .right {
+          top: 4px;
+          height: 46px;
+        }
+      }
+
+    }
+  }
+}
+
+.location-wrapper {
+  display: none;
+}

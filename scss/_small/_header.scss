@@ -1,0 +1,212 @@
+//standard pages with white logo & white menu
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  height: 45px;
+  transition: background .5s ease-out;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background .5s ease, box-shadow .5s ease, width 0s ease .5s;
+  }
+
+  .content {
+    overflow: hidden;
+    margin-right: 8px;
+    transition: background .3s ease-out;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    margin: 11px 0 0 15px;
+
+    svg {
+      width: 80px;
+      height: 26px;
+
+      * {
+        fill: $font-color-light;
+        transition: fill .4s ease-out;
+      }
+    }
+  }
+
+  &.v-white .logo svg * {
+    fill: $button-color;
+  }
+  &.v-white.v-campaign .logo svg * {
+    fill: $font-color-light;
+  }
+
+  .menu-toggle-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #search-toggle {
+    display: none;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+
+    .icon {
+      svg {
+        width: 16px;
+        height: 16px;
+
+        * {
+          fill: $font-color-light;
+          transition: fill .4s ease-out;
+        }
+      }
+    }
+  }
+
+  #main-menu-toggle {
+    padding: 18px 16px;
+    display: block;
+    margin: 0;
+    //overflow: hidden;
+
+    @media #{$small-only} {
+      background: transparent;
+
+      .hover-ripple {
+        display: none;
+      }
+    }
+
+    .menu-closed-wrapper {
+      svg {
+        width: 17px;
+        height: 12px;
+      }
+    }
+    .menu-open-wrapper {
+      display: none;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &.active {
+      border-left: 1px solid $font-color-light-transparent;
+
+      @media #{$small-only} {
+        border-radius: 0;
+      }
+
+      .menu-closed-wrapper {
+        display: none;
+      }
+      .menu-open-wrapper {
+        display: block;
+      }
+    }
+
+    span {
+      &.label {
+        display: none;
+      }
+      &.icon {
+        display: block;
+        line-height: 0;
+      }
+    }
+
+    svg {
+      * {
+        fill: $font-color-light;
+      }
+    }
+  }
+}
+
+header.v-white #main-menu-toggle svg * {
+  fill: $button-color;
+}
+
+
+//menu open search toggle mobile
+@media #{$small-only} {
+  .menu-active {
+    header {
+      #search-toggle {
+        display: block;
+      }
+    }
+  }
+}
+
+//pages header on white > blue logo & blue menu
+//default article pages && projects page
+body {
+  &.article:not(.module):not(.search):not(.reservation):not(.payment),
+  &.projects,
+  &.landingpage.contact {
+    #page:not(.menu-active) {
+      header:not(.v-white) { // add `:not(.v-white)` to have an article page with white header (*Ben) - campaign drinkwater
+        .logo {
+          svg {
+            * {
+              fill: $button-color;
+            }
+          }
+        }
+        
+        #main-menu-toggle {
+          svg {
+            * {
+              fill: $button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//scrolled menu > white bg + logo & menu blue
+body {
+  &.scrolled {
+    #page:not(.menu-active){
+      header {
+        &:after {
+          background: $background-color-light-transparent;
+          box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+          transition: background .5s ease, box-shadow .5s ease;
+        }
+
+        .logo {
+          svg {
+            * {
+              fill: $button-color;
+            }
+          }
+        }
+        #main-menu-toggle {
+          svg {
+            * {
+              fill: $button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
