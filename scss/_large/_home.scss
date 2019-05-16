@@ -1,0 +1,105 @@
+#home-oasen {
+  h1 {
+    max-width: 680px;
+  }
+}
+
+.content-frame.home {
+  //algemeen
+  .description {
+    width: 85%;
+    max-width: 490px;
+    margin-top: 30px;
+  }
+  .button {
+    margin-top: 30px;
+  }
+
+  //home 1 - oasen
+  .scroll-indicator {
+    @media (max-height: 650px){
+      display: none;
+    }
+  }
+
+  .meterstand {
+    margin: 40px auto 150px auto;
+
+    @media #{$large-only} {
+      @media (max-height: 700px) {
+        display: none;
+      }
+      @media (max-height: 840px) {
+        .numbers {
+          display: none;
+        }
+        .actions {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  //home 2 - mijn oasen
+  .quick-links {
+    @media (max-height: 700px){
+      display: none;
+    }
+
+    ul {
+      li {
+        width: 33.33%;
+
+        .icon {
+          svg {
+            @media #{$large-only} {
+              transform: scale(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //home 4 & 6 - nieuws/projecten & over oasen
+  .items {
+    &.news {
+      .item {
+        @media (max-height: 750px) {
+          &.item-2,
+          &.item-3 {
+            display: none;
+          }
+        }
+        @media (max-height: 850px) {
+          &.item-3 {
+            display: none;
+          }
+        }
+      }
+    }
+    .item {
+      a {
+        padding-right: 90px;
+
+        .arrow {
+          right: 60px;
+        }
+      }
+    }
+  }
+
+  .project-wrapper {
+    .project {
+      .inner {
+        max-width: 500px;
+      }
+
+      p {
+        max-height: 50px;
+        overflow: hidden;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}

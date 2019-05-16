@@ -1,0 +1,43 @@
+.payment-wrapper {
+  padding: 40px 0;
+
+  .payment-content {
+    margin: 0 40px;
+    padding: 40px 0;
+
+    .row,
+    .form-row {
+      position: relative;
+
+      .label {
+        width: 180px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .value {
+        padding-left: 200px;
+      }
+    }
+
+    .form-row {
+      padding-left: 200px;
+
+      label {
+        width: 180px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .form-inputs {
+        max-width: none;
+      }
+    }
+
+    .actions {
+      margin-top: 80px;
+    }
+  }
+}
+

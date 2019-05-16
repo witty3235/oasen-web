@@ -1,0 +1,123 @@
+#landing-page {
+  .contact-wrapper {
+    .sidebar {
+      width: 25%;
+    }
+    .contact-blocks {
+      width: 75%;
+
+      .block {
+        width: 100%;
+        float: left;
+
+        .column {
+          padding-top: 50px;
+          padding-bottom: 50px;
+          width: 50%;
+
+          &.left {
+            float: left;
+          }
+          &.right {
+            float: right;
+          }
+        }
+
+        &.faqs {
+          .column {
+            &.right {
+              h3 {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        &.personal-contact {
+        }
+        &.ask-a-question {
+          .column {
+            width: 100%;
+
+            .intro-wrapper {
+              width: 50%;
+              float: left;
+              padding-right: 40px;
+            }
+            .form-wrapper {
+              padding-left: 40px;
+              width: 50%;
+              float: left;
+
+              @media #{$large-only} {
+                form {
+                  .form-row-wrapper {
+                    overflow: hidden;
+                  }
+                  .form-row {
+                    &.zipcode {
+                      width: 50%;
+                      padding-right: 20px;
+                      float: left;
+                    }
+                    &.housenumber {
+                      width: 50%;
+                      float: left;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          @media #{$large-only} {
+            form {
+              .form-row-wrapper {
+                overflow: hidden;
+              }
+              .form-row {
+                &.zipcode {
+                  width: 50%;
+                  padding-right: 20px;
+                  float: left;
+                }
+                &.housenumber {
+                  width: 50%;
+                  float: left;
+                }
+              }
+            }
+          }
+
+          .bg {
+            width: 50%;
+          }
+        }
+        &.footer {
+          min-height: 400px;
+
+          .bg  {
+            display: none;
+          }
+
+          ul {
+            overflow: hidden;
+
+            li {
+              float: left;
+
+              &:nth-child(1),
+              &:nth-child(2) {
+                width: 27%;
+              }
+              &:nth-child(3),
+              &:nth-child(4) {
+                width: 23%;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

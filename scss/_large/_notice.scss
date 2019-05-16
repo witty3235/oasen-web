@@ -1,0 +1,31 @@
+#notice {
+  .notice-bar {
+    height: 65px;
+  }
+
+  .inner-wrap {
+    padding: 0;
+  }
+
+  .content {
+    max-width: 730px;
+    margin: 0 auto;
+    padding: 18px 170px 18px 0;
+    position: relative;
+  }
+
+  p {
+    margin: 2px 0 0 0;
+  }
+
+  .button {
+    top: 10px;
+    right: 0;
+  }
+
+  a.close {
+    top: 22px;
+    right: 30px;
+  }
+
+}

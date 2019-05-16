@@ -1,0 +1,210 @@
+article .sections section {
+  &.infographic {
+    &#conscious-consumption {
+      .content {
+        max-width: 960px;
+      }
+
+      .intro-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .popup {
+        .info-box {
+          padding: 0;
+          background: transparent;
+          color: $font-color-light;
+          top: 25%;
+          left: 10%;
+        }
+
+        .tip-box {
+          padding: 0;
+          background: transparent;
+          top: 20%;
+          right: 5%;
+          bottom: auto;
+          width: 170px;
+
+          p {
+            color: $font-color-light;
+          }
+
+          .icon {
+            width: 90px;
+            height: 90px;
+            background: $font-color-light;
+            border-radius: 45px;
+            padding-top: 18px;
+            margin: 0 auto 45px auto;
+
+            &:after {
+              background: $font-color-light;
+              width: 150px;
+              margin-left: -30px;
+              margin-top: 30px;
+            }
+          }
+        }
+
+        //grey bg
+        &.drinking {
+          .info-box {
+            color: $font-color;
+          }
+          .tip-box {
+            p {
+              color: $font-color;
+            }
+
+            .icon {
+              &:after {
+                background: $font-color;
+              }
+            }
+          }
+        }
+
+        //white bg
+        &.showering,
+        &.other {
+          .info-box {
+            color: $font-color;
+          }
+          .tip-box {
+            p {
+              color: $font-color;
+            }
+
+            .icon {
+              background: $background-color-grey-light;
+
+              &:after {
+                background: $font-color;
+              }
+            }
+          }
+        }
+
+        //blue bg
+        &.toilet,
+        &.dish-washer,
+        &.washing-machine,
+        &.hand-washing {
+          .tr-circle {
+            background: #0783C5;
+          }
+          .close {
+            .icon {
+              &:after,
+              &:before {
+                background: $font-color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &#service-area {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 80px;
+    }
+
+    .content {
+      padding: 0;
+      max-width: $max-text-column-width;
+      margin: 0 auto;
+    }
+
+    ul {
+      li {
+        a {
+          .content {
+          }
+        }
+
+        &#showering {
+          width: 29%;
+          padding-bottom: 29%;
+
+          @media #{$large-up} {
+            top: 20px;
+          }
+        }
+        &#toilet {
+          width: 27.5%;
+          padding-bottom: 27.5%;
+
+          @media #{$large-up} {
+            left: -40px;
+            top: -60px;
+          }
+        }
+        &#washing-machine {
+          width: 25%;
+          padding-bottom: 25%;
+
+          @media #{$large-up} {
+            left: -80px;
+            top: -50px;
+          }
+        }
+        &#other {
+          width: 22%;
+          padding-bottom: 22%;
+
+          @media #{$large-up} {
+            top: -70px;
+            right: -20px;
+          }
+        }
+        &#hand-washing {
+          width: 20%;
+          padding-bottom: 20%;
+
+          @media #{$large-up} {
+            right: -20px;
+          }
+        }
+        &#dish-washer {
+          width: 18%;
+          padding-bottom: 18%;
+
+          @media #{$large-up} {
+            top: -50px;
+            left: -20px;
+          }
+        }
+        &#drinking {
+          width: 17%;
+          padding-bottom: 17%;
+
+          @media #{$large-up} {
+            left: -50px;
+            top: -70px;
+          }
+        }
+      }
+    }
+
+    .popup {
+      &.small {
+        top: 120px;
+      }
+
+      &.drinking-water {
+        .info-box {
+          width: 370px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+//landingpages
+#landing-page {
+  &.news {
+    .header {
+      .tweets {
+        .title {
+          .label {
+            transition: opacity .3s ease;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-frame.home {
+  .project-wrapper {
+    &:hover {
+      .project {
+        p {
+          max-height: 100px;
+        }
+      }
+    }
+  }
+}

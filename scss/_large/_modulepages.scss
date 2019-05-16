@@ -1,0 +1,99 @@
+.content-clear {
+  &.padding-top {
+    padding-top: 130px;
+  }
+}
+
+.modulepage {
+  .step-content {
+    padding: 40px;
+
+    &.error {
+    }
+  }
+
+  .form-row {
+    &:not(.checkbox):not(.radio):not(.textarea) {
+      padding-left: 180px;
+      position: relative;
+
+      > .form-label,
+      > label,
+      > .label {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 170px;
+
+        &.smaller {
+          width: 150px;
+        }
+      }
+    }
+    .form-radio {
+      overflow: hidden;
+      padding-top: 7px;
+
+      .option {
+        float: left;
+
+        &:first-child {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+
+        label {
+          width: auto !important;
+        }
+      }
+
+    }
+    &.is-digital-mail {
+      padding-left: 180px;
+
+      .check-form-label {
+        position: relative;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .check-form {
+    h3 {
+      margin-top: 30px;
+    }
+  }
+
+  .check-row {
+    position: relative;
+    padding-left: 180px;
+    margin-top: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .check-label-light,
+  .check-label {
+    width: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .step-actions {
+  }
+}
+
+//step13
+
+.step-13 {
+  .step-wrapper {
+    h3 {
+      margin-top: 50px;
+
+      & + .step-content {
+        padding-top: 20px;
+      }
+    }
+  }
+}

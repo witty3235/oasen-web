@@ -1,0 +1,16 @@
+#page {
+  &.notice {
+    height: calc(100% - 65px);
+    top: 65px;
+  }
+}
+
+.column-wrapper {
+  .column {
+    .content {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

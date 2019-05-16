@@ -1,0 +1,42 @@
+.reservation-wrapper {
+  padding: 40px 0;
+
+  .form-wrapper {
+    margin: 0 40px;
+    padding: 40px 0;
+
+    form {
+
+      .form-row {
+        position: relative;
+        overflow: hidden;
+        padding-left: 220px;
+
+        &.tall {
+          min-height: 52px;
+        }
+
+        >label {
+          width: 200px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          line-height: 2.4rem;
+        }
+      }
+
+      .form-inputs {
+        &.radio {
+          .radio-wrapper {
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .actions {
+        margin-top: 80px;
+      }
+    }
+  }
+}
+

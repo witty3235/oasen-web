@@ -1,0 +1,15 @@
+.explanation-popup {
+  .popup-wrapper {
+    padding: 60px;
+
+    .popup {
+      padding: 50px 40px 30px 40px;
+      max-width: 500px;
+
+      .close {
+        top: 15px;
+        right: 20px;
+      }
+    }
+  }
+}
