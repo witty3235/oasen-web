@@ -5,7 +5,7 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   cache: true,
-  entry: './src/App.tsx',
+  entry: ['./src/App.tsx', './scss/style.scss'],
 
   // Where the output of our compilation ends up
   output: {
