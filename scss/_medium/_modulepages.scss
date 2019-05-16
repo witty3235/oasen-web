@@ -1,0 +1,53 @@
+
+.content-clear {
+  &.padding-top {
+    padding-top: 100px;
+  }
+}
+
+.modulepage {
+  .module-content {
+    padding-top: 60px;
+  }
+
+  .column-wrapper {
+    &.two-column {
+      .column {
+        .content {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+
+  .progress {
+    margin: 30px auto 60px auto;
+  }
+
+  .step-content {
+    padding: 30px;
+
+    &.error {
+    }
+  }
+
+  form {
+    text-align: left;
+  }
+
+  .step-actions {
+    margin: 40px 0 0 0;
+  }
+}
+
+//step13
+
+.step-13 {
+  .step-wrapper {
+    h3 {
+      & + .step-content {
+        padding-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+#landing-page {
+  .contact-wrapper {
+    width: 100%;
+    float: left;
+
+    .sidebar {
+      width: 50%;
+
+
+
+      a {
+        &:before {
+          top: 11px;
+        }
+        &:after {
+          top: 15px;
+        }
+      }
+    }
+    .contact-blocks {
+      width: 50%;
+
+      .block {
+        .column {
+          padding: 40px;
+        }
+
+        &.faqs {
+        }
+        &.personal-contact {
+          @media #{$medium-only} {
+            background-image: none !important;
+          }
+        }
+        &.ask-a-question {
+          @media #{$medium-only} {
+            background-image: none !important;
+          }
+        }
+        &.footer {
+          @media #{$medium-only} {
+            background-image: none !important;
+            border-left: 1px solid $button-second;
+            overflow: hidden;
+            background: $font-color-light;
+          }
+
+          ul {
+            li {
+              padding: 0 40px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

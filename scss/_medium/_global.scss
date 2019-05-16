@@ -1,0 +1,87 @@
+h1 {
+  font-size: 3.4rem;
+  line-height: 3.4rem;
+}
+
+h3 {
+  &.has-border {
+    padding: 0 30px 20px 30px;
+  }
+}
+
+p {
+  line-height: 2.6rem;
+}
+
+a {
+  &.button {
+    &.incident {
+      .icon {
+        padding: 10px;
+      }
+
+      h3 {
+        padding: 10px 0 10px 50px;
+        margin-right: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}
+
+a.back {
+  display: block;
+  position: absolute;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  top: 80px;
+  left: 26px;
+  z-index: 20;
+  border: 2px solid $button-color;
+  border-radius: 50%;
+
+  &.light {
+    border: 2px solid $font-color-light;
+
+    .icon {
+      &:before,
+      &:after {
+        background: $font-color-light;
+      }
+    }
+  }
+
+  .icon {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 2px;
+      background: $button-color;
+      position: absolute;
+      left: 6px;
+    }
+    &:before {
+      top: 9px;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      bottom: 9px;
+      transform: rotate(45deg);
+    }
+
+  }
+}
+
+.content-frame.scroll-wrapper.splitpage {
+  overflow: hidden;
+}

@@ -1,0 +1,15 @@
+.explanation-popup {
+  .popup-column {
+    float: right;
+  }
+
+  &.active {
+    .popup-column:not(.wide) {
+      width: 50%;
+    }
+  }
+
+  .popup-wrapper {
+    padding: 40px;
+  }
+}

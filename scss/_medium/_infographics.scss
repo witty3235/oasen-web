@@ -1,0 +1,210 @@
+article .sections section {
+  &.infographic {
+    &#conscious-consumption {
+      .content {
+        padding: 0;
+        position: relative;
+      }
+      .header {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      .popup {
+        h2 {
+          padding: 0;
+        }
+      }
+    }
+    &#service-area {
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 60px;
+    }
+
+    @media #{$medium-only} {
+      .intro-box {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 310px;
+        height: 85px;
+
+        h3 {
+          display: block;
+          float: left;
+          width: 180px;
+        }
+
+        .litres {
+          width: 80px;
+          display: block;
+          float: left;
+          margin-top: -21px;
+
+          .amount {
+            font-size: 5.0rem;
+            line-height: 5.0rem;
+          }
+        }
+      }
+    }
+
+
+    .content {
+      padding: 0 80px;
+    }
+
+    ul {
+      li {
+        a {
+          .content {
+          }
+          .label {
+            top: 20%;
+          }
+        }
+
+        &#showering {
+          width: 50%;
+          padding-bottom: 50%;
+        }
+        &#toilet {
+          width: 42.5%;
+          padding-bottom: 42.5%;
+
+          @media #{$medium-only} {
+            top: -130px;
+          }
+        }
+        &#washing-machine {
+          width: 40%;
+          padding-bottom: 40%;
+
+          @media #{$medium-only} {
+            top: -120px;
+            left: -20px;
+          }
+        }
+        &#other {
+          width: 35%;
+          padding-bottom: 35%;
+
+          @media #{$medium-only} {
+            top: -120px;
+            left: -50px;
+          }
+        }
+        &#hand-washing {
+          width: 32.5%;
+          padding-bottom: 32.5%;
+
+          @media #{$medium-only} {
+            top: -20px;
+            right: -30px;
+          }
+        }
+        &#dish-washer {
+          width: 28%;
+          padding-bottom: 28%;
+
+          @media #{$medium-only} {
+            top: -120px;
+            left: -20px;
+          }
+        }
+        &#drinking {
+          width: 26%;
+          padding-bottom: 26%;
+
+          @media #{$medium-only} {
+            top: -100px;
+          }
+        }
+      }
+    }
+    .service-area-info {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .popup {
+      &.small {
+        max-width: 300px;
+        top: 70px;
+        padding: 0;
+      }
+
+      .info-box {
+        padding: 30px;
+        left: 5%;
+      }
+
+      .tip-box {
+        bottom: 5%;
+        right: 5%;
+        padding: 30px;
+        width: 300px;
+      }
+
+      .close {
+        top: 85px;
+        right: 10px;
+      }
+
+      &.drinking-water {
+        .info-box {
+          width: 330px;
+        }
+      }
+      &.aeration {
+        .info-box {
+          top: 40%;
+          width: 370px;
+        }
+      }
+      &.sand-filtration {
+        .info-box {
+          top: 30%;
+          width: 380px;
+        }
+      }
+      &.softening {
+        .info-box {
+          width: 370px;
+        }
+      }
+      &.active-carbon-filter {
+        .info-box {
+          width: 370px;
+        }
+      }
+      &.uv {
+        .info-box {
+          top: 15%;
+          width: 370px;
+        }
+      }
+      &.clean-water-cellar {
+        .info-box {
+          width: 340px;
+        }
+      }
+      &.distribution-pump {
+        .info-box {
+          top: 15%;
+          width: 370px;
+        }
+      }
+      &.tap {
+        .info-box {
+          width: 370px;
+        }
+      }
+    }
+  }
+}

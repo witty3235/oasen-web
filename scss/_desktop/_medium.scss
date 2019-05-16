@@ -1,0 +1,139 @@
+//nav
+
+a.back {
+  transition: border-color .3s ease-out;
+
+  .icon {
+    &:before,
+    &:after {
+      transition: background .3s ease-out;
+    }
+  }
+
+  &:hover {
+    border-color: $font-color-link;
+
+    .icon {
+      &:before,
+      &:after {
+        background: $font-color-link;
+      }
+    }
+  }
+
+  &.light {
+    &:hover {
+      border-color: rgba(255, 255, 255, .6);
+
+      .icon {
+        &:before,
+        &:after {
+          background: rgba(255, 255, 255, .6);
+        }
+      }
+    }
+  }
+
+}
+
+.home-indicator {
+  li:not(.active) {
+    a {
+      .icon {
+        transition: background .3s ease-out;
+      }
+      .label {
+        transition: right .3s ease-out, opacity .2s ease, width 0s ease .3s;
+      }
+
+      &:hover {
+        .icon {
+          background: rgba(255, 255, 255, .7);
+        }
+        .label {
+          width: 600px;
+          opacity: 1;
+          right: 30px;
+          transition: right .3s ease-out, opacity .2s ease;
+        }
+      }
+    }
+  }
+}
+
+//header
+header {
+  .list-menu li a:hover {
+    color: $font-color-light-transparent2;
+  }
+}
+
+////pages with on white > logo blue and menu blue
+////article pages & projects
+body {
+  &.article,
+  &.landingpage.contact {
+    #page:not(.menu-active) {
+      header {
+        //logo is blue in small
+
+        .list-menu {
+          li {
+            a {
+              &:hover {
+                color: $font-color-link;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////pages on splitscreen > logo white and menu blue
+////module pages, search, payment, faq
+////header bg for scroll > 50% & logo white on scroll
+body {
+  &.scrolled {
+    &.article.module,
+    &.article.search,
+    &.article.payment,
+    &.article.faq {
+      #page:not(.menu-active) {
+        header {
+          .logo {
+            &:hover {
+              svg {
+                * {
+                  fill: $font-color-light-transparent2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-frame.home {
+  .project-wrapper {
+    .project {
+      p {
+        transition: margin .8s cubic-bezier(0.580, 0.000, 0.390, 1.000), max-height .8s cubic-bezier(0.580, 0.000, 0.390, 1.000), padding .8s cubic-bezier(0.580, 0.000, 0.390, 1.000);
+      }
+
+    }
+    &:hover {
+      .project {
+        p {
+          max-height: 80px;
+          padding-bottom: 30px;
+          margin-top: 30px;
+          transition: margin .7s cubic-bezier(0.580, 0.000, 0.390, 1.000) .15s, max-height .7s cubic-bezier(0.580, 0.000, 0.390, 1.000) .15s, padding .8s cubic-bezier(0.580, 0.000, 0.390, 1.000);
+        }
+      }
+    }
+  }
+}

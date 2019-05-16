@@ -1,0 +1,194 @@
+//standard pages with white logo & white menu
+header {
+  height: 75px;
+
+  .logo {
+    margin: 20px 0 0 30px;
+
+    svg {
+      width: 130px;
+      height: 42px;
+    }
+  }
+
+  &.v-white .logo svg * {
+    fill: $font-color-light;
+  }
+
+  .menu-toggle-wrapper {
+  }
+
+  #main-menu-toggle {
+    margin: 20px 15px 5px 15px;
+    padding: 9px 20px 7px 20px;
+    @include font-type-base();
+    text-transform: none;
+    height: 36px;
+    width: 116px;
+
+    span {
+      float: left;
+
+      &.label {
+        display: block;
+        margin: -1px 15px 0 0;
+        color: $font-color-light;
+        transition: color .3s ease-out;
+      }
+      &.icon {
+        margin-top: 3px;
+      }
+    }
+
+    &.active {
+      border: none;
+      width: 145px;
+    }
+  }
+}
+
+header.v-white #main-menu-toggle svg * {
+  fill: $font-color-light;
+}
+
+//open menu
+#page.menu-active {
+  .menu-toggle-wrapper {
+    border-left: 1px solid $font-color-light-transparent;
+    padding-left: 15px;
+  }
+}
+
+//special override for projects needed > white menu
+body {
+  &.projects {
+    #page:not(.menu-active) {
+      header {
+        #main-menu-toggle {
+          background: $button-color-transparent2;
+
+          svg {
+            * {
+              fill: $font-color-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//pages with on white > logo blue and menu blue
+//article pages & projects
+body {
+  &.article,
+  &.landingpage.contact {
+    #page:not(.menu-active) {
+      header:not(.v-white) { // add `:not(.v-white)` to have an article page with white header (*Ben) - campaign drinkwater
+        //logo is blue in small
+
+        #main-menu-toggle {
+          background: $button-color-transparent2;
+
+          span {
+            &.label {
+              color: $button-color;
+            }
+            &.icon {
+              svg {
+                * {
+                  fill: $button-color;
+                }
+              }
+            }
+          }
+        }
+
+        .list-menu {
+          li {
+            a {
+              color: $button-color;
+            }
+            &.active {
+              a {
+                border-color: $button-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//pages on splitscreen > logo white and menu blue
+//module pages, search, payment, faq
+//header bg for scroll > 50% & logo white on scroll
+body {
+  &.scrolled {
+    &.article.module,
+    &.article.search,
+    &.article.payment,
+    &.article.faq {
+      #page:not(.menu-active) {
+        header {
+          .logo {
+            svg {
+              * {
+                fill: $font-color-light;
+              }
+            }
+          }
+
+          &:after {
+            width: 50%;
+          }
+          #main-menu-toggle {
+            background: $button-color-transparent2;
+          }
+        }
+      }
+    }
+  }
+}
+
+//scrolled standard white bg + logo & menu blue
+body {
+  &.scrolled {
+    #page:not(.menu-active){
+      header {
+        #main-menu-toggle {
+          background: $button-color-transparent2;
+
+          span {
+            &.label {
+              color: $button-color;
+            }
+            &.icon {
+              svg {
+                * {
+                  fill: $button-color;
+                }
+              }
+            }
+          }
+        }
+
+        .list-menu {
+          li {
+            a {
+              color: $button-color;
+            }
+            &.active {
+              a {
+                color: $font-color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
