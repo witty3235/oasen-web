@@ -1,0 +1,48 @@
+{
+  "name": "oasen-web",
+  "version": "1.0.0",
+  "description": "Frontend code of the website for Oasen. (https://www.oasen.nl)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://witty3235@github.com/witty3235/oasen-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/witty3235/oasen-web/issues"
+  },
+  "homepage": "https://github.com/witty3235/oasen-web#readme",
+  "dependencies": {
+    "adaptivecards": "^1.1.3",
+    "bluebird": "^3.5.4",
+    "hoist-non-react-statics": "^3.3.0",
+    "jspeech": "^0.1.1",
+    "mdurl": "^1.0.1",
+    "prop-types": "^15.7.2",
+    "punycode": "^2.1.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "rxjs": "^6.5.2",
+    "schedule": "^0.5.0",
+    "setimmediate": "^1.0.5",
+    "symbol-observable": "^1.2.0",
+    "timers-browserify": "^2.0.10",
+    "tslib": "^1.9.3",
+    "uc.micro": "^1.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.4",
+    "ts-loader": "^6.0.0",
+    "typescript": "^3.4.5"
+  }
+}
