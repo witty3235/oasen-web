@@ -1,0 +1,161 @@
+article {
+  .header {
+    .media {
+      height: 480px;
+
+      .form-wrapper {
+        #zipcode-form {
+          width: 570px;
+          height: 300px;
+          margin: 100px auto;
+        }
+        .form {
+          padding: 60px;
+        }
+
+        .form-result {
+          .drinkingwater-location-wrapper {
+            padding: 40px 60px 20px 60px;
+          }
+          .drinkingwater-distance-wrapper {
+            padding: 10px 60px 40px 60px;
+          }
+        }
+      }
+    }
+    .intro {
+      padding: 80px 0 0 0;
+    }
+  }
+  .sections {
+    section {
+      padding: 80px 0;
+
+      &:first-child {
+        &.clear {
+          padding-top: 80px;
+        }
+      }
+
+      q {
+        width: 320px;
+
+        &.left {
+          margin-left: -200px;
+        }
+        &.right {
+          margin-right: -200px;
+        }
+      }
+
+      &.text {
+        &.has-sidebar {
+          h2,
+          .text {
+            width: 620px;
+          }
+          aside {
+            width: 320px;
+            margin-right: -220px;
+          }
+        }
+      }
+
+      &.image {
+        .content {
+          &.full {
+            .text-wrapper {
+              padding: 80px 0;
+            }
+          }
+          &.half {
+            .text-wrapper {
+              padding: 80px 60px;
+
+              .inner {
+                max-width: 550px;
+              }
+            }
+          }
+          &.grid {
+            padding: 80px 0;
+          }
+        }
+      }
+
+      &.video {
+        &.full {
+          .content {
+            .text-wrapper {
+              padding: 80px 0;
+            }
+          }
+        }
+        &.half {
+          .content {
+            .text-wrapper {
+              padding: 80px 60px;
+
+              .inner {
+                max-width: 550px;
+              }
+            }
+          }
+        }
+      }
+
+      &.download {
+        .content {
+          .text-wrapper {
+            padding: 80px 0;
+          }
+
+          ul {
+            margin: 0 auto;
+            &.downloads-1 {
+              width: 20%;
+
+              li {
+                width: 100%;
+              }
+            }
+            &.downloads-2 {
+              width: 40%;
+
+              li {
+                width: 50%;
+              }
+            }
+            &.downloads-3 {
+              width: 60%;
+            }
+            &.downloads-4 {
+              width: 80%;
+
+              li {
+                width: 25%;
+              }
+            }
+          }
+        }
+      }
+
+      &.faqs {
+        padding: 80px 0;
+
+        ul {
+          max-width: 100%;
+        }
+
+        .button {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .footer {
+    .content {
+      padding: 80px 0;
+    }
+  }
+}

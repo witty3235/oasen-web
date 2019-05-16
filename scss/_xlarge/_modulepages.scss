@@ -1,0 +1,19 @@
+.modulepage {
+
+  .progress {
+    margin: 30px auto 80px auto;
+  }
+
+  .step-content {
+    padding: 40px 0;
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.popup {
+      .explanation-wrapper {
+        right: 0;
+      }
+    }
+  }
+}

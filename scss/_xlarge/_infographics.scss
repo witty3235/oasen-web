@@ -1,0 +1,27 @@
+article .sections section {
+  &.infographic {
+    &#conscious-consumption {
+      .popup {
+        .litres {
+          .amount {
+            margin: 35px 0 15px 0;
+          }
+        }
+
+        .tip-box {
+          top: 20%;
+          right: 10%;
+
+          .icon {
+            margin-bottom: 65px;
+
+            &:after {
+              margin-top: 35px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

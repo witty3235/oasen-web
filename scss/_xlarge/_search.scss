@@ -1,0 +1,28 @@
+.search-form {
+  margin-top: 60px;
+
+  form {
+    input {
+      font-size: 2.2rem;
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+}
+
+.search-results {
+  ul {
+    li {
+      a {
+
+        max-width: 610px;
+        margin: 0 auto;
+      }
+      .result {
+        padding: 30px 40px;
+        max-width: 610px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

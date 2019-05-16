@@ -1,0 +1,54 @@
+#top-menu-wrapper {
+}
+
+#menu-wrapper {
+  &:after {
+    width: 98.5%;
+  }
+
+  .menu {
+    .main-menu {
+      margin: 120px 0 0 70px;
+
+      > li {
+        width: 311px;
+      }
+
+      .sub-menu {
+        margin-left: 380px;
+        padding-right: 250px;
+        max-width: 1200px;
+
+        li {
+          padding-left: 100px;
+
+          &:first-child {
+            &:after {
+              left: 125px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-info {
+      display: block;
+      margin: 0;
+      position: absolute;
+      bottom: 75px;
+      right: 45px;
+    }
+
+    .footer-menu {
+      padding-right: 220px;
+
+      li {
+        padding: 15px 30px;
+      }
+    }
+
+    .social-menu {
+      margin: 10px 25px 0 0;
+    }
+  }
+}

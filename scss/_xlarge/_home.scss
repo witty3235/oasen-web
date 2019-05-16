@@ -1,0 +1,75 @@
+#home-oasen {
+  h1 {
+    max-width: 720px;
+  }
+}
+
+.content-frame.home {
+  //algemeen
+  .small-title {
+    padding-left: 60px;
+    margin-bottom: 25px;
+  }
+
+
+  //home 1 - oasen
+
+  .meterstand {
+    margin: 40px auto 170px auto;
+
+    @media #{$xlarge-up} {
+
+      @media (max-height: 840px) {
+        .numbers {
+          display: none;
+        }
+        .actions {
+          margin-top: 30px;
+        }
+      }
+
+      @media (max-height: 700px) {
+        display: none;
+      }
+    }
+  }
+
+  //home 2 - mijn oasen
+
+  .quick-links {
+    ul {
+      li {
+        .button {
+          height: 250px;
+        }
+        .icon {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  //home 4 & 6 - nieuws/projecten & over oasen
+  .items {
+    .item {
+      a {
+        padding: 40px 100px 40px 60px;
+
+        .arrow {
+          right: 80px;
+          bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .project-wrapper {
+    .project {
+      padding: 50px 60px 60px 60px;
+
+      .inner {
+      }
+    }
+  }
+}
+

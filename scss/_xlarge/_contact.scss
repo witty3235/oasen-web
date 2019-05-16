@@ -1,0 +1,51 @@
+#landing-page {
+  .contact-wrapper {
+    h2 {
+      font-size: 4.0rem;
+      line-height: 4.4rem;
+    }
+    .sidebar {
+      width: 25%;
+    }
+    .contact-blocks {
+      width: 75%;
+
+      .block {
+        .column {
+          padding: 100px 60px;
+        }
+
+        &.ask-a-question {
+          .column {
+            .intro-wrapper {
+              padding-right: 60px;
+            }
+            .form-wrapper {
+              padding-left: 60px;
+
+              form {
+                .form-row {
+                  position: relative;
+                  overflow: hidden;
+                  padding-left: 180px;
+                }
+                label {
+                  width: 160px;
+                  position: absolute;
+                  left:0;
+                  top: 5px;
+                }
+              }
+            }
+          }
+        }
+
+        &.footer {
+          ul {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
