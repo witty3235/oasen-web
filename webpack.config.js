@@ -1,10 +1,11 @@
 'use strict';
 
 var path = require('path');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   cache: true,
-  entry: './src/App.tsx', 
+  entry: './src/App.tsx',
 
   // Where the output of our compilation ends up
   output: {
@@ -32,12 +33,25 @@ module.exports = {
       query: {
         presets: ['es2015', 'react']
       }
+    }, {
+      test: /\.scss$/,
+      use: [
+        "style-loader", // creates style nodes from JS strings
+        "css-loader", // translates CSS into CommonJS
+        "sass-loader" // compiles Sass to CSS, using Node Sass by default
+      ]
     }]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      publicPath: '/dist/css',
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "dist/css/style.css"
+    })
   ],
   resolve: {
     // Files with the following extensions are fair game for webpack to process
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '*.scss', '*.css']
   },
 };
