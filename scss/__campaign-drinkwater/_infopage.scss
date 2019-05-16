@@ -1,0 +1,43 @@
+article.v-campaign {
+  padding-top: 0;
+}
+
+.campaign-end-video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 3;
+  background-color: $font-color-light;
+}
+.campaign-end-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.google-map-container { z-index: 1; }
+.station-wrapper,
+.zipcode-container    { z-index: 2; }
+
+.map-section {
+  position: relative;
+}
+
+
+.google-map-container {
+  position: relative;
+}
+
+
+article.v-campaign section.infographic h2 {
+  text-align: center;
+}

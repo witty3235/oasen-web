@@ -1,0 +1,133 @@
+// <nav>
+.ui-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+}
+
+// <button> both
+.ui-bar button {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+// display svg
+.ui-bar svg * {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+// ================================ mute button
+.ui-btn-mute {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  background: none;
+
+  @media #{$medium-up} {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ui-btn-mute svg {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 13px);
+  width: 26px;
+  height: 26px;
+
+  * {
+    stroke-width: 1.5;
+  }
+}
+
+.ui-btn-mute svg .sound-muted {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.ui-btn-mute.js-muted svg .sound-muted {
+  opacity: 1;
+}
+
+.ui-btn-mute span {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  //padding: 5px 10px;
+  padding: 3px 7px;
+  white-space: nowrap;
+  color: $font-color-light;
+  background-color: rgba($font-color-light, 0.2);
+  border-radius: 3px;
+  transform: translateX(-20px) translateY(-50%);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.device-desktop .ui-btn-mute:hover {
+
+  span {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+// ======================================= skip button
+.ui-btn-skip {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 9px 20px 7px 20px;
+  white-space: nowrap;
+  background-color: rgba($font-color-light, 0.1);
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.ui-btn-skip span {
+  color: rgba($font-color-light, 0.4);
+  transition: color 0.3s;
+}
+
+.ui-btn-skip svg {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+
+  * {
+    stroke-width: 2.4; // ocd Anouk
+  }
+}
+
+.device-desktop .ui-btn-skip:hover {
+  background-color: rgba($font-color-light, 0.2);
+
+  span {
+    color: rgba($font-color-light, 1.0);
+  }
+
+  svg {
+    opacity: 1;
+  }
+}
+
+

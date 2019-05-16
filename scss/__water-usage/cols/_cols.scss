@@ -1,0 +1,95 @@
+.wu-cols {
+  position: relative;
+  background-color: $primary-color;
+  background-image: linear-gradient(rgba(#0098DE, 0.7), rgba(#0098DE, 0.7));
+
+  @media #{$large-up} {
+    display: flex;
+  }
+}
+
+.wu-col {
+  padding-top: 0;
+
+  @media #{$large-up} {
+    width: 50%;
+    min-height: 50vw;
+    position: relative;
+  }
+}
+
+article.wu-col {
+  overflow: visible;
+}
+
+.wu-col {
+  &:nth-child(1){
+    background-color: $font-color-light;
+  }
+  &:nth-child(2){
+    background-color: #f9f9f9;
+  }
+}
+
+
+.wu-col-content {
+  padding: 30px 20px;
+
+  @media #{$large-up} {
+    position: relative;
+    height: 100%;
+    padding: 60px;
+  }
+}
+
+
+.wu-data {
+  position: relative;
+  width: 77%;
+  max-width: 600px;
+  margin-top: 12px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    pointer-events: none;
+  }
+
+  .wu-mask-circle,
+  .wu-mask-drop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+
+.wu-values {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+}
+
+.wu-usage-info p {
+  line-height: 1.2em;
+}
+
+// ======================== layers
+.wu-waves {
+  z-index: 2;
+}
+
+.wu-time,
+.wu-amount-label {
+  z-index: 3;
+}

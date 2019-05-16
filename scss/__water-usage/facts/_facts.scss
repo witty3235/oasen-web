@@ -1,0 +1,15 @@
+.wu-facts {
+  position: relative;
+  z-index: 10;
+  background-color: transparent; // $primary-color;
+  // background-image: linear-gradient(rgba(#0098DE, 0.7), rgba(#0098DE, 0.7));
+}
+
+.wu-facts-content {
+  padding: 0 0 40px 0;
+  background-color: $background-color-grey-light;
+
+  @media #{$large-up} {
+    padding: 60px 60px 100px 60px;
+  }
+}

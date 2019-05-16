@@ -1,0 +1,95 @@
+
+
+.wu-top-headingSub,
+.wu-intro {
+  display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media #{$medium-up} {
+    max-width: 500px;
+  }
+
+  @media #{$xlarge-up} {
+    max-width: 700px;
+  }
+}
+
+.wu-top-headingSub {
+  max-width: 70%;
+}
+
+// ================================= main heading
+.wu-top-heading {
+  margin-bottom: 20px;
+  max-width: calc(100% - 100px);
+
+  @media #{$medium-up} {
+    margin-bottom: 45px;
+    max-width: none;
+  }
+
+  @media #{$xxlarge-up} {
+    margin-bottom: 90px;
+  }
+}
+
+
+// ================================= sub heading
+.wu-top-headingSub {
+  position: relative;
+}
+
+// ================================= large number
+.wu-usage-number {
+  position: relative;
+  margin-top: 120px;
+
+  @media #{$medium-up} {
+    margin-top: 0;
+  }
+
+  .cubic-meters {
+
+    opacity: 0;
+
+    &:after {
+      display: inline-block;
+      width: 0;
+      padding-left: 0.25em;
+      font-size: 0.28em;
+      vertical-align: super;
+      transform: translateY(-0.3em);
+
+      content: '\006D\00B3';
+    }
+  }
+}
+
+.wu-usage-number > span {
+  position: relative;
+}
+
+
+// ================================= copy
+// gets rendered in cols-section of screenwidth is smaller then $medium
+.wu-intro {
+  position: relative;
+  padding: 30px;
+  background-color: #c0ebff;
+
+  @media #{$medium-up} {
+    margin-top: 60px;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.wu-intro-title {
+  margin-bottom: 15px;
+}
+
+.wu-intro p {
+  margin: 0;
+}

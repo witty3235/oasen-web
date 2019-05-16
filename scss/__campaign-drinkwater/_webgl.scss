@@ -1,0 +1,39 @@
+.canvas-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.canvas-container canvas {
+  display: block;
+}
+
+.campaignVideo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-150%);
+}
+
+.campaignVideo.debug {
+  transform: none;
+  z-index: 100;
+  width: 200px;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient( rgba(black, 0) 25%, rgba(black, 1) 60%);
+  background-size: 100vmax 100vmax;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+}

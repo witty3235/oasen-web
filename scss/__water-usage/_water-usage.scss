@@ -1,0 +1,46 @@
+// Notes from Ben:
+// Important
+// throughout this folder the prefix `wu-` for 'water-usage' to avoid classname conflicts
+
+// The `water hardheid` component from the water-usage module was placed into the
+// campaign-drinkwater (360 video) afterwards. As all scss gets compiled in one file and is loaded
+// on all pages, I decided to leave the styles here and not split it up.
+
+$wu-black: #010101;
+
+@import "../__water-usage/typography";
+@import "../__water-usage/top-section/container";
+@import "../__water-usage/top-section/content";
+@import "../__water-usage/top-section/graph";
+@import "../__water-usage/cols/cols";
+@import "../__water-usage/cols/usage";
+@import "../__water-usage/cols/hardness";
+@import "../__water-usage/cols/dropdown";
+@import "../__water-usage/cols/location-wave";
+@import "../__water-usage/facts/flickity";
+@import "../__water-usage/facts/facts";
+@import "../__water-usage/facts/item";
+@import "../__water-usage/facts/slider";
+
+
+.water-usage {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: $primary-color;
+}
+
+.wu-top { z-index: 1; }
+.wu-cols { z-index: 2; }
+
+.wu-spaced-top {
+  padding-top: 20px;
+}
+
+
+
+// @media #{$small-up} {}
+// @media #{$medium-up} {}
+// @media #{$large-up} {}
+// @media #{$xlarge-up} {}
+// @media #{$xxlarge-up} {}

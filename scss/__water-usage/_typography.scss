@@ -1,0 +1,147 @@
+// for headings and copy
+
+// ========================== weights
+.wu-black {
+  font-family: $font-type-heading;
+  font-weight: normal;
+}
+
+.wu-bold {
+  font-family: $font-type-base-bold;
+  font-weight: normal;
+}
+
+.wu-light {
+  font-family: $font-type-base;
+  font-weight: normal;
+}
+
+// ========================== alignment
+.wu-left {
+  text-align: left;
+}
+
+.wu-center {
+  text-align: center;
+}
+
+.wu-right {
+  text-align: right;
+}
+
+// ========================== color
+.wu-white {
+  color: $font-color-light;
+  @include correctFontRendering;
+}
+
+// ========================== sizes
+.wu-h1 {
+  font-size: 6.2rem;
+  line-height: 1em;
+
+  @media #{$medium-up} {
+    font-size: 14.5vw;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 24.3rem;
+  }
+}
+
+.wu-h2 {
+  font-size: 10vw; // 14vw;
+
+  @media #{$large-up} {
+    font-size: 5.5vw; // 6vw;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 9.5rem; // 11.5rem;
+  }
+}
+
+.wu-h3 {
+  font-size: 2.6rem;
+
+  @media #{$medium-up} {
+    font-size: 4vw;
+  }
+
+  @media #{$large-up} {
+    font-size: 3vw;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 5rem;
+  }
+}
+
+.wu-h4 {
+  font-size: 1.4rem;
+
+  @media #{$small-up} {
+    font-size: 4vw;
+  }
+
+  @media #{$large-up} {
+    font-size: 2vw;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 3.0rem;
+  }
+}
+
+
+.wu-h5 {
+  font-size: 1.4rem;
+
+  @media #{$medium-up} {
+    font-size: 2.5vw;
+  }
+
+  @media #{$xlarge-up} {
+    font-size: 3rem;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 3.5rem;
+  }
+}
+
+.wu-h6 {
+  font-size: 1.8rem;
+  line-height: 1.3em;
+
+  @media #{$large-up} {
+    font-size: 2.8rem;
+  }
+}
+
+.wu-p {
+  font-size: 1.4rem;
+  line-height: 1.6em;
+
+  @media #{$medium-up} {
+    font-size: 1.6rem;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 2rem;
+  }
+}
+
+a.wu-a-blue {
+  color: $button-color;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+  will-change: opacity;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+

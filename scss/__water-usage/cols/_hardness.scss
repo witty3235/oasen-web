@@ -1,0 +1,77 @@
+.wu-hardness {
+  padding-top: 0;
+  background-color: #f9f9f9;
+}
+
+.wu-hardness .wu-col-content {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f9f9f9;
+
+  @media #{$large-up} {
+    width: 50%;
+    min-height: 50vw;
+    position: relative;
+  }
+}
+
+.wu-mask-drop * {
+  fill: #f9f9f9;
+}
+
+
+.wu-hardness .wu-values {
+  background-color: #0b9adb;
+}
+
+
+.wu-hardness {
+  .wu-amount,
+  .wu-amount-label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.wu-hardness .wu-amount {
+  top: 57%;
+}
+
+.wu-hardness .wu-amount > sup {
+  top: 0.1em;
+  display: inline-block;
+  margin-left: -1.5em;
+  font-size: 0.35em;
+  vertical-align: top;
+  transform: translateX(135%);
+}
+
+.wu-hardness .wu-amount-label {
+  bottom: 16%;
+}
+
+.legend-hardness {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.legend-label {
+  position: absolute;
+  left: -50px;
+  width: 100px;
+  opacity: 0.5;
+  line-height: 1.1em;
+  white-space: nowrap;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.legend-label {
+  &:nth-child(1) { top: 22%; }
+  &:nth-child(2) { top: 50%; }
+  &:nth-child(3) { bottom: 9%; }
+}
+

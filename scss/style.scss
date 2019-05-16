@@ -1,0 +1,142 @@
+// imports
+
+@import "normalize";
+@import "variables";
+
+// mixins
+@import "__mixins/image";
+@import "__mixins/typography";
+@import "__mixins/buttons";
+
+//global
+@import "__global/fonts";
+
+// small screens
+@media #{$small-up} {
+  //global
+  @import "__global/typography";
+  @import "__global/helpers";
+  @import "__global/touch";
+  @import "__global/transitions";
+
+  // Small screens
+  @import "_small/global";
+  @import "_small/form";
+  @import "_small/preloader";
+  @import "_small/main";
+  @import "_small/header";
+  @import "_small/search";
+  @import "_small/nav";
+  @import "_small/footer";
+  @import "_small/home";
+  @import "_small/landingpages";
+  @import "_small/contact";
+  @import "_small/faq";
+  @import "_small/article";
+  @import "_small/infographics";
+  @import "_small/warning";
+  @import "_small/notice";
+  @import "_small/modules";
+  @import "_small/modulepages";
+  @import "_small/selfscan";
+  @import "_small/popup";
+  @import "_small/reservation";
+  @import "_small/payment";
+  @import "_small/ieold";
+  @import "_small/datepicker";
+}
+
+// Medium screens
+@media #{$medium-up} {
+  /* min-width 641px, medium screens */
+  @import "_medium/global";
+  @import "_medium/main";
+  @import "_medium/header";
+  @import "_medium/search";
+  @import "_medium/nav";
+  @import "_medium/home";
+  @import "_medium/landingpages";
+  @import "_medium/contact";
+  @import "_medium/faq";
+  @import "_medium/article";
+  @import "_medium/infographics";
+  @import "_medium/warning";
+  @import "_medium/notice";
+  @import "_medium/modules";
+  @import "_medium/modulepages";
+  @import "_medium/selfscan";
+  @import "_medium/popup";
+  @import "_medium/reservation";
+  @import "_medium/payment";
+}
+
+// Large screens
+@media #{$large-up} {
+  /* min-width 1025px, large screens */
+  @import "_large/global";
+  @import "_large/main";
+  @import "_large/search";
+  @import "_large/nav";
+  @import "_large/home";
+  @import "_large/landingpages";
+  @import "_large/contact";
+  @import "_large/faq";
+  @import "_large/article";
+  @import "_large/infographics";
+  @import "_large/warning";
+  @import "_large/notice";
+  @import "_large/modules";
+  @import "_large/modulepages";
+  @import "_large/selfscan";
+  @import "_large/popup";
+  @import "_large/reservation";
+  @import "_large/payment";
+}
+
+// XLarge screens
+@media #{$xlarge-up} {
+  /* min-width 1441px, xlarge screens */
+  @import "_xlarge/global";
+  @import "_xlarge/search";
+  @import "_xlarge/nav";
+  @import "_xlarge/home";
+  @import "_xlarge/landingpages";
+  @import "_xlarge/contact";
+  @import "_xlarge/faq";
+  @import "_xlarge/article";
+  @import "_xlarge/infographics";
+  @import "_xlarge/warning";
+  @import "_xlarge/modules";
+  @import "_xlarge/modulepages";
+  @import "_xlarge/selfscan";
+  @import "_xlarge/reservation";
+  @import "_xlarge/payment";
+}
+
+// XXLarge screens
+@media #{$xxlarge-up} {
+  /* min-width 1921px, xxlarge screens */
+  @import "_xxlarge/global";
+  @import "_xxlarge/home";
+  @import "_xxlarge/contact";
+}
+
+// print styles
+@media #{$print} {
+  /* min-width 1921px, xxlarge screens */
+  @import "_print-reset.scss";
+  @import "_print.scss";
+}
+
+
+//ie 10/11 fixes for infographic bugs
+@import "__global/ie-fix";
+
+// Water usage module
+@import "__water-usage/water-usage";
+
+// campaign 'waar komt mijn drinkwater vandaan'
+@import "__campaign-drinkwater/campaign";
+
+// 'drinkwater gebruik'
+@import "__water-usage/water-usage";

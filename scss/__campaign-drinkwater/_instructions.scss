@@ -1,0 +1,119 @@
+.instructions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.instruction-item {
+  max-width: 300px;
+
+  @media #{$medium-up} {
+    max-width: 800px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.instruction-title {
+  margin-bottom: 0;
+  font-size: 3.5rem;
+  line-height: 1.05em;
+  color: $font-color-light;
+  @include correctFontRendering;
+
+  @media #{$medium-up} {
+    font-size: 4rem;
+  }
+  @media #{$large-up} {
+    font-size: 4.9rem;
+  }
+}
+.instruction-subtitle {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  line-height: 1.05em;
+  color: $font-color-light;
+  @include correctFontRendering;
+
+  @media #{$medium-up} {
+    font-size: 2rem;
+  }
+  @media #{$large-up} {
+    font-size: 2.45rem;
+  }
+}
+
+
+$icon-size: 160px;
+.instruction-icon {
+  margin-right: auto;
+  margin-left: auto;
+  width: $icon-size;
+  height: $icon-size;
+
+  svg {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}
+
+
+///////////////////////////////////////////////////
+
+.device-desktop .instructions .button-hold:hover {
+  cursor: none;
+}
+
+.device-desktop .instructions .cta-start {
+  position: absolute;
+  top: -$btn-dim-desktop * 0.5;
+  left: -$btn-dim-desktop * 0.5;
+  width: $btn-dim-desktop;
+  height: $btn-dim-desktop;
+  will-change: transform;
+  transform: translateX(50vw) translateY(50vh);
+}
+
+.instructions .cta-start .hold-title {
+  left: 50%;
+  width: auto;
+  transform: translateX(-50%);
+
+  * {
+    white-space: nowrap;
+  }
+}
+
+.device-desktop .instructions .cta-start .hold-title {
+  top: -90px;
+}
+
+.device-mobile .instructions .cta-start .hold-title {
+  top: -60px;
+}
+
+.instructions .cta-start h1 {
+  font-size: 2.8rem;
+  line-height: 1.2em;
+  color: $font-color-light;
+  @include correctFontRendering;
+
+  @media #{$medium-up} {
+    font-size: 3.0rem;
+  }
+
+  @media #{$large-up} {
+    font-size: 3.5rem;
+  }
+
+  @media #{$xlarge-up} {
+    font-size: 3.7rem;
+  }
+}

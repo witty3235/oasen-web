@@ -1,0 +1,61 @@
+@keyframes raster-fadeIn {
+  from {opacity: 0;}
+  to {opacity: 0.2;}
+}
+
+.wu-top {
+  position: relative;
+  padding: 50px 30px 120px 30px;
+  background-color: $primary-color;
+  overflow: visible;
+
+  @media #{$medium-up} {
+    padding: 90px 30px 110px 30px;;
+  }
+}
+
+// rasterlines
+.wu-top:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.wu-top-raster:after {
+  -webkit-animation-name: raster-fadeIn;
+  -moz-animation-name: raster-fadeIn;
+  -o-animation-name: raster-fadeIn;
+  animation-name: raster-fadeIn;
+  animation-duration: 1.5s;
+
+  content: '';
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient($font-color-light, $font-color-light),
+    linear-gradient($font-color-light, $font-color-light),
+    linear-gradient($font-color-light, $font-color-light);
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: 10% 0%, 50% 0%, 90% 0%;
+
+  @media #{$medium-up} {
+    background-image:
+      linear-gradient($font-color-light, $font-color-light),
+      linear-gradient($font-color-light, $font-color-light),
+      linear-gradient($font-color-light, $font-color-light),
+      linear-gradient($font-color-light, $font-color-light),
+      linear-gradient($font-color-light, $font-color-light);
+    background-position: 10% 0%, 30% 0%, 50% 0%, 70% 0%, 90% 0%;
+  }
+}
+
+// ============================ layers
+
+.z-1 { z-index: 1; }
+.z-2 { z-index: 2; }
+.z-3 { z-index: 3; }
+.wu-top:after  { z-index: 3; }
+

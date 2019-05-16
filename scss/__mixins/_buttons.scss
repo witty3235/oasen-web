@@ -1,0 +1,40 @@
+@mixin text-link($type:base) {
+  text-decoration: none;
+  @include font-type-base(bold);
+  display: inline-block;
+  line-height: 2.6rem;
+  transition: color .3s ease;
+  cursor: pointer;
+
+  @if $type == base {
+    color: $button-color;
+  }
+
+  @if $type == light {
+    color: $font-color-light;
+  }
+
+  @if $type == dark {
+    color: $font-color-link;
+  }
+}
+
+@mixin text-link-hover($type:base) {
+  @if $type == base {
+    &:hover {
+      color: $font-color-link;
+    }
+  }
+
+  @if $type == light {
+    &:hover {
+      border-color: $font-color-light;
+    }
+  }
+
+  @if $type == dark {
+    &:hover {
+      color: $font-color-link-hover;
+    }
+  }
+}

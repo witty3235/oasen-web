@@ -1,0 +1,61 @@
+.wu-usage {
+  background-color: $primary-color;
+  background-image: linear-gradient(rgba(#0098DE, 0.7), rgba(#0098DE, 0.7));
+}
+
+.wu-usage .wu-col-content {
+  background-color: $font-color-light;
+}
+
+.wu-mask-circle * {
+  fill: $font-color-light;
+}
+
+.wu-usage .wu-values {
+  background-color: #26b4f4;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: $font-color-light;
+    opacity: 0.2;
+  }
+}
+
+
+
+.wu-usage {
+  .wu-amount,
+  .wu-time {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.wu-usage .wu-amount {
+  bottom: 54%;
+}
+
+.wu-usage .wu-amount > sup {
+  top: -0.4em;
+  display: inline-block;
+  margin-left: -1.5em;
+  font-size: 0.4em;
+  vertical-align: top;
+  transform: translateX(124%);
+
+  sup {
+    font-size: 0.6em;
+    vertical-align: top;
+  }
+}
+
+.wu-usage .wu-time {
+  bottom: 16%;
+}
+

@@ -1,0 +1,21 @@
+header.v-campaign {
+  pointer-events: none;
+
+  .logo {
+    pointer-events: auto;
+  }
+
+  .list-menu,
+  #search-toggle,
+  .module-block.search,
+  .menu-toggle-wrapper {
+    display: none !important;
+  }
+
+}
+
+header.v-white {
+  .logo:hover svg * {
+    fill: rgba(white, 0.6) !important;
+  }
+}

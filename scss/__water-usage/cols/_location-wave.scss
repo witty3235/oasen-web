@@ -1,0 +1,42 @@
+// <div>
+.wu-waves {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+// <svg>
+.wu-wave {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: auto;
+  width: 400%;
+  opacity: 0.7;
+  will-change: transform;
+}
+
+
+// ================================= usage
+.wu-usage .wu-wave {
+  top: 50%;
+
+  * {
+    // fill: $primary-color;
+    fill: #008fd0;
+  }
+}
+
+// ================================= hardness
+.wu-hardness .wu-wave {
+  //top: 70%;
+
+  * {
+    // fill: #0b9adb;
+    fill: #4bbeed;
+  }
+}

@@ -1,0 +1,38 @@
+.content-frame.v-campaign {
+  .scroll-indicator {
+    z-index: 2;
+    bottom: 25px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    // hide for mobile
+    display: none;
+    @media #{$medium-up} {
+      display: block;
+    }
+
+    .icon {
+      width: 29px;
+      height: 56px;
+
+      display: block;
+      line-height: 0;
+      margin: 0 auto;
+
+      opacity: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.page.scrolled .content-frame.v-campaign .scroll-indicator {
+  opacity: 0;
+}

@@ -1,0 +1,70 @@
+// general colors
+$primary-color: #26b4f4;
+//$primary-color: rgb(125, 219, 255);
+$primary-color2: #0ba8e9;
+$primary-color-transparent: rgba(38,180,244,.94);
+$secondary-color: #42c8fb;
+$action-color: #ff6c00;
+$action-color-transparent: rgba(219,93,0,.94);
+$action-hover-color: #ed5a02;
+$button-color: #109ede;
+$button-color-transparent: rgba(16,158,222,.8);
+$button-color-transparent2: rgba(16,158,222,.2);
+$button-color-transparent3: rgba(16,158,222,.1);
+$button-hover-color: #0a8eca;
+$button-highlight-color: #55c1f1;
+$button-second: #dedede;
+$button-hover-second: #d3d3d3;
+$button-light-hover-color: rgba(255,255,255,.4);
+
+$font-color: #2c2c2c;
+$font-color-second: #212b38;
+$font-color-third: #979797;
+$font-color-light: #ffffff;
+$font-color-light-transparent:  rgba(255,255,255,.2);
+$font-color-light-transparent2:  rgba(255,255,255,.6);
+$font-color-light-transparent3:  rgba(255,255,255,.3);
+$font-color-link: #0d75a4;
+$font-color-link-hover: #0b5170;
+$font-color-error: #ff3a26;
+
+$background-color: #26b4f4;
+$background-color-transparent: rgba(38,180,244,.9);
+$background-color-light-transparent: rgba(255,255,255,.94);
+$background-color-dark: #133346;
+$background-color-black: #1e2023;
+$background-color-grey: #d5d6d6;
+$background-color-grey-light: #f3f3f3;
+
+$border-color-light: #dddddd;
+$border-color-light2: #b7b7b7;
+
+
+$max-text-column-width: 800px;
+$max-text-column-width-wide: 1000px;
+
+// font
+$font-type-base: 'strada light', sans-serif;
+$font-type-base-bold: 'strada bold', sans-serif;
+$font-type-base-italic: 'strada italic', sans-serif;
+$font-type-heading: 'strada black', sans-serif;
+
+//font sizes
+//standard browser: 16px. 62.5% sets it to 10px. 1.8rem sets baseFont to 18px. 6.4rem = 64px. etc.
+$size-font-reset: 62.5%;
+$size-font-base: 1.8rem;
+$line-height-base: 2.2rem;
+
+// media queries
+$print: "print";
+
+$small-up: "screen";
+$medium-up: "screen and (min-width: 700px)";
+$large-up: "screen and (min-width: 1000px)";
+$xlarge-up: "screen and (min-width: 1440px)";
+$xxlarge-up: "screen and (min-width: 1600px)";
+
+$small-only: "screen and (max-width: 699px)";
+$medium-only: "screen and (min-width: 700px) and (max-width: 999px)";
+$large-only: "screen and (min-width: 1000px) and (max-width: 1439px)";
+$xlarge-only: "screen and (min-width: 1440px) and (max-width: 1599px)";

@@ -1,0 +1,20 @@
+@mixin svg-bg-img($file, $width, $height, $position: 0 0, $repeat: no-repeat) {
+  background: url('../images/' + $file + '.png');
+  background-image: url('../images/' + $file + '.svg'), none;
+  background-size: $width $height;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+/* mixin for retina background images */
+@mixin retina-bg-img($file, $type, $width, $height) {
+  background-image: url('../images/' + $file + '.' + $type);
+  background-size: $width $height;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    & {
+      background-image: url('../images/' + $file + '@2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+}

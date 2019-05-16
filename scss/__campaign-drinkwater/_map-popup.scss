@@ -1,0 +1,136 @@
+
+.map-popup {
+  position: relative;
+  padding-top: 45px;
+
+  @media #{$medium-up} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
+.result-popup-wrapper {
+  @media #{$medium-up} {
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 30px;
+  }
+}
+
+.map-popup .popup-content {
+  padding: 30px;
+  text-align: center;
+  pointer-events: auto;
+
+  @media #{$medium-up} {
+    max-width: 480px;
+    padding: 50px 60px;
+  }
+}
+
+.map-popup {
+  &.v-white .popup-content {
+    background-color: $font-color-light;
+  }
+
+  &.v-blue .popup-content {
+    background-color: $background-color;
+    color: $font-color-light;
+  }
+}
+
+.popup-divider {
+  display: block;
+  width: calc(100% + 60px); // fake edge to edge (padding)
+  height: 1px;
+  margin: 25px 0 25px -30px;
+  border: none;
+
+  @media #{$medium-up} {
+    width: calc(100% + 120px); // fake edge to edge (padding)
+    margin: 25px 0 25px -60px;
+  }
+
+  .v-white & {
+    background-color: rgba(black, 0.1);
+  }
+
+  .v-blue & {
+    background-color: rgba($font-color-light, 0.3);
+  }
+}
+
+.popup-title,
+.popup-copy {
+  @media #{$medium-up} {
+    max-width: 290px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+h2.popup-title {
+  font-family: $font-type-base-bold;
+  font-size: 2.9rem;
+  line-height: 3.2rem;
+
+  .popup-copy + & {
+    margin-top: 10px;
+  }
+}
+
+.popup-copy {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .popup-title + & {
+    margin-top: 30px;
+  }
+}
+
+.v-blue .popup-title,
+.v-blue .popup-copy {
+  color: $font-color-light;
+}
+
+.v-blue .popup-copy {
+  margin-bottom: 0;
+}
+
+
+
+h1.station-distance {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 4.5rem;
+  @include correctFontRendering;
+  white-space: nowrap;
+
+  @media #{$medium-up} {
+    font-size: 6.1rem;
+  }
+}
+
+h1.station-distance svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 33px;
+  margin-right: 10px;
+  fill: none;
+  stroke: $font-color-light;
+  stroke-width: 1.2px;
+
+  @media #{$medium-up} {
+    width: 32px; // auto;
+    height: 46px; // 0.75em;
+  }
+}

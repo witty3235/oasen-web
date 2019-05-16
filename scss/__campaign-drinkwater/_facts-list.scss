@@ -1,0 +1,48 @@
+.drinkwater-facts {
+  background-color: $background-color !important;
+}
+
+.facts-title {
+  margin-bottom: 1em;
+  color: $font-color-light;
+  @include correctFontRendering;
+}
+
+.facts-list {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  list-style-type: none;
+  counter-reset: list-counter;
+  padding: 0 30px;
+
+  &:last-child { margin-bottom: 0; }
+
+  @media #{$large-up} {
+    padding: 0;
+  }
+}
+
+.facts-item {
+  position: relative;
+  display: block;
+  margin-top: 1.4em;
+  padding-left: 1.8em;
+  text-align: left;
+  list-style-type: none;
+  counter-increment: list-counter;
+  color: $font-color-light;
+  @include correctFontRendering;
+
+  &:before {
+    content: counter(list-counter) '\002e';
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include font-type-base(bold);
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+}

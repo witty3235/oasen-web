@@ -1,0 +1,31 @@
+.wu-slider {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    pointer-events: none;
+  }
+}
+
+.wu-slider .wu-mask-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  * {
+    fill: $background-color-grey-light;
+  }
+}

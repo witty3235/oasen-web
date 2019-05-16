@@ -1,0 +1,134 @@
+.wu-graph {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.7;
+  pointer-events: none;
+  overflow: hidden;
+
+  &.animated {
+    top: 0;
+  }
+}
+
+.wu-graph canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transform-origin: 50% 100%;
+
+  transform: scaleX(4) scaleY(0.4);
+
+  &.animated {
+    transform: translateX(-75%) scaleX(1) scaleY(1);
+  }
+}
+
+
+// ============================ legend for the graph
+
+// ============================ container
+.wu-axis {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+// ============================ value general
+.wu-axis-label {
+  font-variant-numeric: oldstyle-nums;
+}
+
+// ============================ horizontal
+.wu-axis-x {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+
+  @media #{$xlarge-up} {
+    bottom: 20px;
+  }
+}
+
+.wu-axis-x .wu-axis-label {
+  position: absolute;
+  top: -10px;
+  transform: translateX(-50%);
+
+  @media #{$medium-up} {
+    top: -20px;
+  }
+
+  @media #{$large-up} {
+    top: -30px;
+  }
+
+  &:nth-child(1) {
+    left: 10%;
+  }
+
+  &:nth-child(2) {
+    left: 50%;
+  }
+
+  &:nth-child(3) {
+    left: 90%;
+  }
+}
+
+
+// ============================ vertical
+.wu-axis-y {
+  position: absolute;
+  left: 15px;
+  bottom: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media #{$medium-up} {
+    left: 25px;
+  }
+
+  @media #{$xlarge-up} {
+    left: 30px;
+  }
+}
+
+.wu-axis-y .wu-axis-label {
+  position: relative;
+}
+
+// using first child to inherit font-sizes
+.wu-axis-y .wu-axis-label:first-child:before {
+  content: '\006D\00B3';
+  position: absolute;
+  top: -10px;
+  left: -7px;
+  display: block;
+  font-size: 1em;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+
+  @media #{$medium-up} {
+    top: -40px;
+    left: 0;
+  }
+
+  @media #{$large-up} {
+    top: -50px;
+  }
+
+  @media #{$xlarge-up} {
+    top: -60px;
+  }
+}
+

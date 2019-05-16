@@ -1,0 +1,119 @@
+.form-campaign .form-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  &.last-row {
+    margin-bottom: 30px;
+  }
+
+  @media #{$medium-up} {
+    flex-wrap: nowrap;
+  }
+}
+
+.form-campaign .form-row.field-error .form-inputs:last-of-type:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 9px);
+  right: -24px;
+  width: 2px;
+  height: 18px;
+  background-color: $font-color-error;
+  background-image: linear-gradient($font-color-light, $font-color-light);
+  background-size: 2px 4px;
+  background-repeat: no-repeat;
+  background-position: 0 calc( 100% - 2px );
+}
+
+.form-campaign .form-inputs {
+  &.zipcode1,
+  &.zipcode2,
+  &.addition {
+    width: 30px;
+    position: relative;
+  }
+}
+
+.form-campaign .form-inputs {
+  &.zipcode1,
+  &.zipcode2 {
+    margin-right: 2px;
+
+    &:nth-child(5){
+      margin-right: 10px;
+    }
+  }
+}
+
+.form-campaign .form-inputs.housenumber {
+  width: 56px;
+  margin-right: 10px;
+}
+
+
+
+.form-campaign .row-label {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 5px;
+  text-align: left;
+
+  @media #{$medium-up} {
+    width: 140px;
+    min-width: 140px;
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+}
+
+input.v-grey {
+  height: 38px;
+  width: 100%;
+  padding: 0;
+  line-height: 38px;
+  text-align: center;
+  appearance: none;
+  font-size: 18px;
+  color: #000;
+  border-radius: 3px;
+  background: $background-color-grey;
+}
+
+input.v-grey {
+  &::-webkit-input-placeholder {
+    color: #000 !important;
+    opacity: 0.25;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #000 !important;
+    opacity: 0.25;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: #000 !important;
+    opacity: 0.25;
+  }
+  &:-ms-input-placeholder {
+    color: #000 !important;
+    opacity: 0.25;
+  }
+}
+
+input.v-grey:focus::-webkit-input-placeholder { color: transparent !important; }
+input.v-grey:focus:-moz-placeholder { color: transparent !important; }
+input.v-grey:focus::-moz-placeholder { color: transparent !important; }
+input.v-grey:focus:-ms-input-placeholder { color: transparent !important; }
+
+// form error
+.form-result {
+  background-color: $font-color-light;
+  text-align: left;
+  color: $font-color-error;
+  min-height: 20px;
+
+  &:not(:empty) {
+    padding-bottom: 20px;
+  }
+}
+

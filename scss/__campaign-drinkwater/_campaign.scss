@@ -1,0 +1,36 @@
+$btn-dim-desktop: 100px;
+$btn-dim-mobile: 120px;
+
+@import "../__campaign-drinkwater/instructions";
+@import "../__campaign-drinkwater/webgl";
+@import "../__campaign-drinkwater/transition-container";
+@import "../__campaign-drinkwater/infopage";
+@import "../__campaign-drinkwater/map-popup";
+@import "../__campaign-drinkwater/campaign-form";
+@import "../__campaign-drinkwater/facts-list";
+@import "../__campaign-drinkwater/holdbutton";
+@import "../__campaign-drinkwater/campaign-header";
+@import "../__campaign-drinkwater/ui-bar";
+@import "../__campaign-drinkwater/scrolldown-icon";
+
+
+// layers
+.three-sixty-canvas { z-index: 1; }
+.instructions       { z-index: 2; }
+
+.v-campaign ::-moz-selection {
+  background: $primary-color;
+  color:#fff;
+
+}
+.v-campaign ::selection {
+  background: $primary-color;
+  color: #fff;
+}
+
+
+@media #{$small-up} {}
+@media #{$medium-up} {}
+@media #{$large-up} {}
+@media #{$xlarge-up} {}
+@media #{$xxlarge-up} {}

@@ -1,0 +1,110 @@
+.page.no-cursor {
+  cursor: none;
+  user-select: none;
+}
+
+.mouse-follower {
+  position: absolute;
+  pointer-events: none; // important for mousemove to work
+  transition: opacity 0.2s linear;
+
+  &.v-hidden {
+    opacity: 0;
+  }
+}
+
+.device-mobile .mouse-follower {
+  left: calc(50% - #{$btn-dim-mobile * 0.5});
+  bottom: 80px;
+  width: $btn-dim-mobile;
+  height: $btn-dim-mobile;
+}
+
+.device-desktop .mouse-follower {
+  top: -$btn-dim-desktop * 0.5;
+  left: -$btn-dim-desktop * 0.5;
+  width: $btn-dim-desktop;
+  height: $btn-dim-desktop;
+  will-change: transform;
+  transform: translateX(50vw) translateY(50vh);
+}
+
+.button-hold {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+.device-mobile .button-hold {
+  width: $btn-dim-mobile;
+  height: $btn-dim-mobile;
+}
+.device-desktop .button-hold {
+  width: $btn-dim-desktop;
+  height: $btn-dim-desktop;
+}
+
+.device-mobile .instructions .button-hold {
+  position: fixed;
+  bottom: 100px;
+  left: calc(50% - #{$btn-dim-mobile * 0.5});
+}
+
+.click-hold-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.click-hold-animation--hidden {
+  visibility: hidden;
+}
+
+.click-hold-animation svg {
+  display: block;
+}
+
+.click-hold-animation:only-child svg {
+  -webkit-filter: drop-shadow( 0px 0px 20px rgba(0, 0, 0, 0.7) ); 
+  filter: drop-shadow( 0px 0px 20px rgba(0, 0, 0, 0.7) )
+}
+
+// hide the mobile bodymovin on landscape because it doesn't fit.
+@media (max-width: 699px) and (orientation: landscape) {
+  .click-hold-animation svg .countdown {
+    opacity: 0;
+  }
+}
+
+.hold-title {
+  position: absolute;
+  top: -40px;
+  width: 160px;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.device-mobile .hold-title {
+  left: (160 - $btn-dim-mobile) * -0.5;
+}
+.device-desktop .hold-title {
+  left: (160 - $btn-dim-desktop) * -0.5;
+}
+
+.hold-title span {
+  display: block;
+
+  font-family: $font-type-heading;
+  color: $font-color-light;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  @include correctFontRendering;
+  will-change: transform, opacity;
+}
